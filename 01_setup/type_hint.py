@@ -9,4 +9,5 @@ d: bool
 e: list[int] = [1, 2, 3]
 f: dict[str, bool] = {"foo": True, "bar": False}
 
+# Literal: Enumのように使用可能 + 引数値のチェックに使用可能
 g: Literal["OK", "NG"] = "OK"
