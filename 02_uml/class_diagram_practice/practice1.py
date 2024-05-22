@@ -8,9 +8,18 @@ class Employee:
     def _work(self) -> None:
         print(f"{self.name} is working")
 
-    # getter, setter
-    def get_saraly(self) -> int:
+    # # getter, setter
+    # def get_saraly(self) -> int:
+    #     return self.__salary
+
+    # def set_salary(self, salary: int) -> None:
+    #     self.__salary = salary
+
+    # property decorator
+    @property
+    def salary(self) -> str:
         return self.__salary
 
-    def set_salary(self, salary: int) -> None:
+    @salary.setter
+    def salary(self, salary: int) -> None:
         self.__salary = salary
