@@ -8,8 +8,8 @@ class Employee:
     def _work(self) -> None:
         print(f"{self.name} is working")
 
-    def get_saraly(self):
+    def get_saraly(self) -> int:
         return self.__salary
 
-    def set_salary(self, salary):
+    def set_salary(self, salary) -> None:
         self.__salary = salary
