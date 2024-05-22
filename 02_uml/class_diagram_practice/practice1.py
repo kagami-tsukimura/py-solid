@@ -5,11 +5,11 @@ class Employee:
         self.__name = name
         self.__salary = salary
 
-    def _work(self):
+    def _work(self) -> None:
         print(f"{self.name} is working")
 
     def get_saraly(self):
-        return self.salary
+        return self.__salary
 
     def set_salary(self, salary):
-        self.salary = salary
+        self.__salary = salary
