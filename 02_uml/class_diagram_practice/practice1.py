@@ -6,7 +6,7 @@ class Employee:
         self.__salary = salary
 
     def _work(self) -> None:
-        print(f"{self.name} is working")
+        print(f"{self.__name} is working")
 
     # # getter, setter
     # def get_saraly(self) -> int:
