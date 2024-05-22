@@ -1,3 +1,4 @@
+# クラス図の実装
 class Employee:
     def __init__(self, id, name, salary):
         self.emp_id: int = id
