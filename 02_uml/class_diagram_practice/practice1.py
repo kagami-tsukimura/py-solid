@@ -8,6 +8,7 @@ class Employee:
     def _work(self) -> None:
         print(f"{self.name} is working")
 
+    # getter, setter
     def get_saraly(self) -> int:
         return self.__salary
 
