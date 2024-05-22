@@ -11,5 +11,5 @@ class Employee:
     def get_saraly(self) -> int:
         return self.__salary
 
-    def set_salary(self, salary) -> None:
+    def set_salary(self, salary: int) -> None:
         self.__salary = salary
