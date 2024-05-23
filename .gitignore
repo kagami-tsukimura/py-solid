@@ -3,6 +3,7 @@ solid
 !dependency_inversion
 !interface_segregation
 !liskov_substitution
+!open_closed
 04*/
 05*/
 06*/
