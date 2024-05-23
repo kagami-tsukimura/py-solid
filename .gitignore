@@ -1,9 +1,4 @@
 solid
-03_solid_principle/*
-!dependency_inversion
-!interface_segregation
-!liskov_substitution
-!open_closed
 04*/
 05*/
 06*/
