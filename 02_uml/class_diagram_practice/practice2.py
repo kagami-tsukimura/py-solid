@@ -25,3 +25,8 @@ class Square(Shape):
 
     def calc_area(self) -> int:
         return self.__length * self.__length
+
+
+class Client:
+    def __init__(self, shape: Shape):
+        self.__shape = shape
