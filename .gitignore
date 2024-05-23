@@ -1,6 +1,7 @@
 solid
 03_solid_principle/*
 !dependency_inversion
+!interface_segregation
 04*/
 05*/
 06*/
