@@ -2,10 +2,10 @@ from practice2 import Rectangle, Square
 
 
 def main() -> None:
-    rect = Rectangle(10, 20)
+    rect = Rectangle(width=10, height=20)
     print(rect.calc_area())
 
-    square = Square(10)
+    square = Square(length=7)
     print(square.calc_area())
 
 
