@@ -1,4 +1,4 @@
-from practice2 import Client, Rectangle, Square
+from practice2 import Rectangle, Square
 
 
 def main() -> None:
