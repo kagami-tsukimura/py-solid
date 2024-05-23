@@ -16,3 +16,12 @@ class Rectangle(Shape):
 
     def calc_area(self) -> int:
         return self.__width * self.__height
+
+
+class Square(Shape):
+
+    def __init__(self, length: int):
+        self.__length = length
+
+    def calc_area(self) -> int:
+        return self.__length * self.__length
