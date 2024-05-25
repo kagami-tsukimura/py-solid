@@ -19,7 +19,7 @@ class HourReporter:
 
     def report_hours(self, employee: EmployeeData):
         self.__get_regular_hours()
-        print(f"{employee.name}の労働時間をレポートしました\n")
+        print(f"{employee.name}の労働時間をレポートしました")
 
 
 class EmployeeRepository:
