@@ -47,15 +47,25 @@ class Expert(IEmployee):
         return math.floor(base * 3)
 
 
+class Professional(IEmployee):
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
+
+    def get_bonus(self, base: int) -> int:
+        return math.floor(base * 5)
+
+
 if __name__ == "__main__":
     base_bonus = 100
     junior = Junior("Alice")
     middle = Middle("Bob")
     senior = Senior("Carol")
     expert = Expert("David")
+    professional = Professional("Eve")
 
     print(f"base bonus: {base_bonus}")
     print(f"{junior.name} get bonus: {junior.get_bonus(base_bonus)}")
     print(f"{middle.name} get bonus: {middle.get_bonus(base_bonus)}")
     print(f"{senior.name} get bonus: {senior.get_bonus(base_bonus)}")
     print(f"{expert.name} get bonus: {expert.get_bonus(base_bonus)}")
+    print(f"{professional.name} get bonus: {professional.get_bonus(base_bonus)}")
