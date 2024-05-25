@@ -1,5 +1,6 @@
 import unittest
-from bad_example import f, Rectangle, Square
+
+from bad_example import Rectangle, Square, f
 
 
 class RectangleTest(unittest.TestCase):
