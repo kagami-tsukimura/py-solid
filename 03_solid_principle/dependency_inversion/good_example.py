@@ -26,7 +26,7 @@ class UserController:
         return self.__user_service.find_by_id(id)
 
 
-class UserService:
+class UserService(IUserService):
     def __init__(self):
         self.__user_repository = UserRdbRepository()
 
