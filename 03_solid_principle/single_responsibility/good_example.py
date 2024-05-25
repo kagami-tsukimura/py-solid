@@ -5,25 +5,25 @@ class EmployeeData:
 
 
 class PayCalculator:
-    def __get_regular_hours(self):
+    def __get_regular_hours(self) -> None:
         print("経理部門ロジック")
 
-    def calculate_pay(self, employee: EmployeeData):
+    def calculate_pay(self, employee: EmployeeData) -> None:
         self.__get_regular_hours()
         print(f"{employee.name}の給与を計算しました\n")
 
 
 class HourReporter:
-    def __get_regular_hours(self):
+    def __get_regular_hours(self) -> None:
         print("人事部門ロジック")
 
-    def report_hours(self, employee: EmployeeData):
+    def report_hours(self, employee: EmployeeData) -> None:
         self.__get_regular_hours()
         print(f"{employee.name}の労働時間をレポートしました")
 
 
 class EmployeeRepository:
-    def save(self):
+    def save(self) -> None:
         pass
 
 
