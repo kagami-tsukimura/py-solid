@@ -54,6 +54,7 @@ if __name__ == "__main__":
     senior = Senior("Carol")
     expert = Expert("David")
 
+    print(f"base bonus: {base_bonus}")
     print(f"{junior.name} get bonus: {junior.get_bonus(base_bonus)}")
     print(f"{middle.name} get bonus: {middle.get_bonus(base_bonus)}")
     print(f"{senior.name} get bonus: {senior.get_bonus(base_bonus)}")
