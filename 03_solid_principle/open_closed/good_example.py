@@ -4,7 +4,11 @@ from abc import ABCMeta, abstractmethod
 
 class IEmployee(metaclass=ABCMeta):
     def __init__(self, name: str) -> None:
-        self.name = name
+        self.__name = name
+
+    @property
+    def name(self) -> str:
+        return self.__name
 
     @abstractmethod
     def get_bonus(self, base: int) -> int:
@@ -46,4 +50,4 @@ class Expert(IEmployee):
 if __name__ == "__main__":
     junior = Junior("Yamada")
 
-    print(junior.get_bonus(100))
+    print(f"{junior.name} get bonus: {junior.get_bonus(100)}")
