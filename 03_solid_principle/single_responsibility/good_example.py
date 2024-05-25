@@ -28,7 +28,7 @@ class EmployeeRepository:
 
 
 if __name__ == "__main__":
-    emp = EmployeeData("山田", "開発")
+    emp = EmployeeData("SS", "development")
     calc = PayCalculator()
     rep = HourReporter()
 
