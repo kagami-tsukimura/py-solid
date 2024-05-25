@@ -19,10 +19,10 @@ class Employee:
 
     def get_regular_hours(self):
         # 仕様変更前
-        print("経理部門・人事部門共通のロジック")
+        # print("経理部門・人事部門共通のロジック")
 
         # 仕様変更後
-        # print("経理部門の仕様変更済み")
+        print("経理部門の仕様変更済み")
 
 
 if __name__ == "__main__":
