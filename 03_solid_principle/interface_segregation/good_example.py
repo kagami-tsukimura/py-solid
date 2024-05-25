@@ -49,8 +49,8 @@ class Car(Vehicle, Movable):
 
 
 if __name__ == "__main__":
-    v1: Vehicle = Airplane("AirBus", "white")
-    v2: Vehicle = Car("Prius", "black")
+    v1 = Airplane("AirBus", "white")
+    v2 = Car("Prius", "black")
 
     v1.start()
     v1.stop()
