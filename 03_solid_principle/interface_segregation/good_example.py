@@ -6,6 +6,8 @@ class Vehicle(metaclass=ABCMeta):
         self.name = name
         self.color = color
 
+
+class Movable(metaclass=ABCMeta):
     @abstractmethod
     def start(self):
         pass
@@ -14,6 +16,8 @@ class Vehicle(metaclass=ABCMeta):
     def stop(self):
         pass
 
+
+class Flyable(metaclass=ABCMeta):
     @abstractmethod
     def fly(self):
         pass
