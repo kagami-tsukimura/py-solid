@@ -1,4 +1,11 @@
 import math
 from abc import ABCMeta, abstractmethod
 
-# 従業員の職位
+
+class IEmployee(metaclass=ABCMeta):
+    def __init__(self, name: str) -> None:
+        self.name = name
+
+    @abstractmethod
+    def get_bonus(self) -> int:
+        pass
