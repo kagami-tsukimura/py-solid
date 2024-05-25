@@ -23,8 +23,8 @@ class HourReporter:
 
 
 class EmployeeRepository:
-    def save(self, employee: EmployeeData):
-        print(f"{employee.name}を保存しました")
+    def save(self):
+        pass
 
 
 if __name__ == "__main__":
