@@ -58,5 +58,7 @@ class UserRdbRepository(IUserRepository):
 
 
 if __name__ == "__main__":
-    user_controller = UserController()
+    user_rdb_repository = UserRdbRepository()
+    user_service = UserService(user_rdb_repository)
+    user_controller = UserController(user_service)
     user_controller.find_by_id("123")
