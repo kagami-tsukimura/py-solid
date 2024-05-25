@@ -29,7 +29,7 @@ class Rectangle(Shape):
         self.__height = height
 
     def get_area(self) -> int:
-        return self.width * self.height
+        return self.__width * self.__height
 
 
 class Square(Shape):
@@ -45,7 +45,7 @@ class Square(Shape):
         self.__length = length
 
     def get_area(self) -> int:
-        return self.length**2
+        return self.__length**2
 
 
 if __name__ == "__main__":
