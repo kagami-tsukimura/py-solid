@@ -7,5 +7,5 @@ class IEmployee(metaclass=ABCMeta):
         self.name = name
 
     @abstractmethod
-    def get_bonus(self) -> int:
+    def get_bonus(self, base: int) -> int:
         pass
