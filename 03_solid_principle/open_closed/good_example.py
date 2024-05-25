@@ -48,6 +48,13 @@ class Expert(IEmployee):
 
 
 if __name__ == "__main__":
-    junior = Junior("Yamada")
+    base_bonus = 100
+    junior = Junior("Alice")
+    middle = Middle("Bob")
+    senior = Senior("Carol")
+    expert = Expert("David")
 
-    print(f"{junior.name} get bonus: {junior.get_bonus(100)}")
+    print(f"{junior.name} get bonus: {junior.get_bonus(base_bonus)}")
+    print(f"{middle.name} get bonus: {middle.get_bonus(base_bonus)}")
+    print(f"{senior.name} get bonus: {senior.get_bonus(base_bonus)}")
+    print(f"{expert.name} get bonus: {expert.get_bonus(base_bonus)}")
