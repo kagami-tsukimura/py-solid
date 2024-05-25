@@ -2,9 +2,9 @@ import math
 
 
 class IEmployee:
-    def __init__(self, name: str, base: int, mag: float) -> None:
+    def __init__(self, name: str, mag: float) -> None:
         self.__name = name
-        self.__base = base
+        self.__base = 100
         self.__mag = mag
 
     @property
@@ -16,39 +16,37 @@ class IEmployee:
 
 
 class Junior(IEmployee):
-    def __init__(self, name: str, base: int, mag: float) -> None:
-        super().__init__(name, base, mag)
+    def __init__(self, name: str, mag: float) -> None:
+        super().__init__(name, mag)
 
 
 class Middle(IEmployee):
-    def __init__(self, name: str, base: int, mag: float) -> None:
-        super().__init__(name, base, mag)
+    def __init__(self, name: str, mag: float) -> None:
+        super().__init__(name, mag)
 
 
 class Senior(IEmployee):
-    def __init__(self, name: str, base: int, mag: float) -> None:
-        super().__init__(name, base, mag)
+    def __init__(self, name: str, mag: float) -> None:
+        super().__init__(name, mag)
 
 
 class Expert(IEmployee):
-    def __init__(self, name: str, base: int, mag: float) -> None:
-        super().__init__(name, base, mag)
+    def __init__(self, name: str, mag: float) -> None:
+        super().__init__(name, mag)
 
 
 class Professional(IEmployee):
-    def __init__(self, name: str, base: int, mag: float) -> None:
-        super().__init__(name, base, mag)
+    def __init__(self, name: str, mag: float) -> None:
+        super().__init__(name, mag)
 
 
 if __name__ == "__main__":
-    base_bonus = 100
-    junior = Junior("Alice", base_bonus, 1.1)
-    middle = Middle("Bob", base_bonus, 1.5)
-    senior = Senior("Carol", base_bonus, 2)
-    expert = Expert("David", base_bonus, 3)
-    professional = Professional("Eve", base_bonus, 5)
+    junior = Junior("Alice", 1.1)
+    middle = Middle("Bob", 1.5)
+    senior = Senior("Carol", 2)
+    expert = Expert("David", 3)
+    professional = Professional("Eve", 5)
 
-    print(f"base bonus: {base_bonus}")
     print(f"{junior.name} get bonus: {junior.get_bonus()}")
     print(f"{middle.name} get bonus: {middle.get_bonus()}")
     print(f"{senior.name} get bonus: {senior.get_bonus()}")
