@@ -23,7 +23,7 @@ class Flyable(metaclass=ABCMeta):
         pass
 
 
-class Airplane(Vehicle):
+class Airplane(Vehicle, Movable, Flyable):
     def __init__(self, name: str, color: str):
         super().__init__(name, color)
 
@@ -37,7 +37,7 @@ class Airplane(Vehicle):
         print("fly!")
 
 
-class Car(Vehicle):
+class Car(Vehicle, Movable):
     def __init__(self, name: str, color: str):
         super().__init__(name, color)
 
@@ -47,13 +47,13 @@ class Car(Vehicle):
     def stop(self):
         print("stop!")
 
-    def fly(self):
-        raise Exception("Car can't fly!")
-
 
 if __name__ == "__main__":
     v1: Vehicle = Airplane("AirBus", "white")
     v2: Vehicle = Car("Prius", "black")
 
+    v1.start()
+    v1.stop()
     v1.fly()
-    v2.fly()
+    v2.start()
+    v2.stop()
