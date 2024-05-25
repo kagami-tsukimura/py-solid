@@ -1,51 +1,38 @@
-from abc import ABCMeta, abstractmethod
-
-
-class Employee(metaclass=ABCMeta):
+class EmployeeData:
     def __init__(self, name: str, department: str) -> None:
         self.name = name
         self.department = department
 
-    @abstractmethod
-    def get_regular_hours(self) -> None:
-        pass
 
-
-class Calculator(Employee):
-    # 経理部門がアクター
-    def get_regular_hours(self) -> None:
+class PayCalculator:
+    def _get_regular_hours(self):
         print("経理部門の仕様変更済み")
 
-    def calculate_pay(self) -> None:
-        self.get_regular_hours()
+    def calculate_pay(self):
+        self._get_regular_hours()
         print(f"{self.name}の給与を計算しました")
 
 
-class Reporter(Employee):
-    # 人事部門がアクター
-    def get_regular_hours(self) -> None:
+class HourReporter:
+    def _get_regular_hours(self):
         print("人事部門の仕様変更済み")
 
-    def report_hours(self) -> None:
+    def report_hours(self):
         self.get_regular_hours()
         print(f"{self.name}の労働時間をレポートしました")
 
 
-class Engineer(Employee):
-    # エンジニアがアクター
-    def save(self) -> None:
+class EmployeeRepository:
+    def save(self):
         print(f"{self.name}を保存しました")
 
 
 if __name__ == "__main__":
-    emp = Employee("山田", "開発")
-    calc = Calculator(Employee)
-    rep = Reporter(Employee)
-    eng = Engineer(Employee)
+    emp = EmployeeData("山田", "開発")
 
     print("経理部門")
-    calc.calculate_pay()
+    emp.calculate_pay()
 
     print("")
     print("人事部門")
-    rep.report_hours()
+    emp.report_hours()
