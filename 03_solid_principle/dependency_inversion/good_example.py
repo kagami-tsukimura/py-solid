@@ -15,6 +15,16 @@ class IUserService(metaclass=ABCMeta):
         pass
 
 
+class IUserRepository(metaclass=ABCMeta):
+    @abstractmethod
+    def create(user: User) -> User:
+        pass
+
+    @abstractmethod
+    def find_by_id(id: str) -> User:
+        pass
+
+
 class UserController:
     def __init__(self, user_service: IUserService):
         self.__user_service = user_service
@@ -27,8 +37,8 @@ class UserController:
 
 
 class UserService(IUserService):
-    def __init__(self):
-        self.__user_repository = UserRdbRepository()
+    def __init__(self, user_repository: IUserRepository):
+        self.__user_repository = user_repository
 
     def create(self, user: User) -> User:
         return self.__user_repository.create(user)
@@ -37,7 +47,7 @@ class UserService(IUserService):
         return self.__user_repository.find_by_id(id)
 
 
-class UserRdbRepository:
+class UserRdbRepository(IUserRepository):
     def create(self, user: User) -> User:
         print("RDBにUserを登録")
         return user
