@@ -9,7 +9,7 @@ class PayCalculator:
         print("経理部門の仕様変更済み")
 
     def calculate_pay(self):
-        self._get_regular_hours()
+        self.__get_regular_hours()
         print(f"{self.name}の給与を計算しました")
 
 
@@ -18,7 +18,7 @@ class HourReporter:
         print("人事部門の仕様変更済み")
 
     def report_hours(self):
-        self.get_regular_hours()
+        self.__get_regular_hours()
         print(f"{self.name}の労働時間をレポートしました")
 
 
