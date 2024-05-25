@@ -33,8 +33,8 @@ if __name__ == "__main__":
     rep = HourReporter()
 
     print("経理部門")
-    calc.calculate_pay()
+    calc.calculate_pay(emp)
 
     print("")
     print("人事部門")
-    rep.report_hours()
+    rep.report_hours(emp)
