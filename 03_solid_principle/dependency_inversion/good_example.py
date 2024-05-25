@@ -57,9 +57,23 @@ class UserRdbRepository(IUserRepository):
         return User()
 
 
+class TestRepository(IUserRepository):
+    def create(self, user: User) -> User:
+        print("RDBにUserを登録")
+        return user
+
+    def find_by_id(self, id: str) -> User:
+        print(f"Test ID: {id}のユーザーを検索")
+        return User()
+
+
 if __name__ == "__main__":
     user_rdb_repository = UserRdbRepository()
     # Dependency Injection
     user_service = UserService(user_rdb_repository)
     user_controller = UserController(user_service)
     user_controller.find_by_id("123")
+    # Test
+    test_repository = TestRepository()
+    test_controller = UserController(test_repository)
+    test_controller.find_by_id("456")
