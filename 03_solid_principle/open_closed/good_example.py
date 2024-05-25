@@ -16,36 +16,41 @@ class IEmployee:
 
 
 class Junior(IEmployee):
-    def __init__(self, name: str, mag: float) -> None:
-        super().__init__(name, mag)
+    def __init__(self, name: str) -> None:
+        MAG = 1.1
+        super().__init__(name, MAG)
 
 
 class Middle(IEmployee):
-    def __init__(self, name: str, mag: float) -> None:
-        super().__init__(name, mag)
+    def __init__(self, name: str) -> None:
+        MAG = 1.5
+        super().__init__(name, MAG)
 
 
 class Senior(IEmployee):
-    def __init__(self, name: str, mag: float) -> None:
-        super().__init__(name, mag)
+    def __init__(self, name: str) -> None:
+        MAG = 2
+        super().__init__(name, MAG)
 
 
 class Expert(IEmployee):
-    def __init__(self, name: str, mag: float) -> None:
-        super().__init__(name, mag)
+    def __init__(self, name: str) -> None:
+        MAG = 3
+        super().__init__(name, MAG)
 
 
 class Professional(IEmployee):
-    def __init__(self, name: str, mag: float) -> None:
-        super().__init__(name, mag)
+    def __init__(self, name: str) -> None:
+        MAG = 5
+        super().__init__(name, MAG)
 
 
 if __name__ == "__main__":
-    junior = Junior("Alice", 1.1)
-    middle = Middle("Bob", 1.5)
-    senior = Senior("Carol", 2)
-    expert = Expert("David", 3)
-    professional = Professional("Eve", 5)
+    junior = Junior("Alice")
+    middle = Middle("Bob")
+    senior = Senior("Carol")
+    expert = Expert("David")
+    professional = Professional("Eve")
 
     print(f"{junior.name} get bonus: {junior.get_bonus()}")
     print(f"{middle.name} get bonus: {middle.get_bonus()}")
