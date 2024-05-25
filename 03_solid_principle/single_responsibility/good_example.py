@@ -10,7 +10,7 @@ class PayCalculator:
 
     def calculate_pay(self, employee: EmployeeData):
         self.__get_regular_hours()
-        print(f"{employee.name}の給与を計算しました")
+        print(f"{employee.name}の給与を計算しました\n")
 
 
 class HourReporter:
@@ -19,7 +19,7 @@ class HourReporter:
 
     def report_hours(self, employee: EmployeeData):
         self.__get_regular_hours()
-        print(f"{employee.name}の労働時間をレポートしました")
+        print(f"{employee.name}の労働時間をレポートしました\n")
 
 
 class EmployeeRepository:
@@ -35,6 +35,5 @@ if __name__ == "__main__":
     print("経理部門")
     calc.calculate_pay(emp)
 
-    print("")
     print("人事部門")
     rep.report_hours(emp)
