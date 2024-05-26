@@ -15,6 +15,5 @@ class TestTemplate(metaclass=ABCMeta):
     def execute(self) -> None:
         pass
 
-    @abstractmethod
     def teardown() -> None:
-        pass
+        print("teardown")
