@@ -36,6 +36,6 @@ if __name__ == "__main__":
     print("---adaptee---")
     print(adaptee.get_json_data())
 
-    adapter = JsonToCsvAdapter()
+    adapter = JsonToCsvAdapter(adaptee)
     print("---adapter---")
     print(adapter.get_csv_data())
