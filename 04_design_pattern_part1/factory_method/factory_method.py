@@ -55,3 +55,6 @@ class CreditCardFactory(CreditCardFactory):
         credit_card = self.create_credit_card(owner)
         self.register_credit_card(credit_card)
         return credit_card
+
+
+credit_card_database: list[CreditCard] = []
