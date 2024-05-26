@@ -42,3 +42,13 @@ class CreditCardFactory(metaclass=ABCMeta):
     @abstractmethod
     def register_credit_card(self, card: CreditCard) -> None:
         pass
+
+
+class CreditCardFactory(CreditCardFactory):
+    def create_credit_card(self, owner: str) -> CreditCard:
+        credit_card = self.create_credit_card(owner)
+        self.register_credit_card(credit_card)
+        return credit_card
+
+    def register_credit_card(self, card: CreditCard) -> None:
+        print("Registering  credit card...")
