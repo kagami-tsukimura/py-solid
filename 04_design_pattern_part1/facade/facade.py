@@ -26,5 +26,6 @@ class Order:
 
 
 if __name__ == "__main__":
+    name = "design pattern"
     order = Order()
-    order.place_order("商品A")
+    order.place_order(name)
