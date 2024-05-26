@@ -40,4 +40,18 @@ class WaitingRoom(Aggregate):
         self.__patients.append(patient)
 
     def get_iterator(self) -> IIterator:
-        return super().get_iterator()
+        return WaitingRoomIterator(self)
+
+
+class WaitingRoomIterator(IIterator):
+    def __init__(self, aggregate: WaitingRoom) -> None:
+        self.__aggregate = aggregate
+        self.__index = 0
+
+    def has_next(self) -> bool:
+        return self.__index < self.__aggregate.get_count()
+
+    def next(self) -> Patient:
+        if self.has_next():
+            self.__index += 1
+            return self.__aggregate.get_patients()[self.__index - 1]
