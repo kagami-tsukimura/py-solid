@@ -18,3 +18,9 @@ class IIterator(metaclass=ABCMeta):
     @abstractmethod
     def next(self) -> Patient:
         pass
+
+
+class Aggregate(metaclass=ABCMeta):
+    @abstractmethod
+    def get_iterator(self) -> IIterator:
+        pass
