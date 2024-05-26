@@ -4,6 +4,9 @@ import datetime
 class Logger:
     # クラス変数
     _instance = None
-    
-    # インスタンス生成のために作成
-    def __new__
+
+    # インスタンス生成のために作成（インスタンス生成前に実行）
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
