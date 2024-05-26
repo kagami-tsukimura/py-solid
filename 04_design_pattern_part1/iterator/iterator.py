@@ -32,3 +32,6 @@ class WaitingRoom(Aggregate):
 
     def get_patients(self) -> list[Patient]:
         return self.__patients
+
+    def get_count(self) -> int:
+        return len(self.__patients)
