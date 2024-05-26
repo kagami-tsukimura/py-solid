@@ -84,3 +84,5 @@ if __name__ == "__main__":
     gold_factory = GoldCreditCardFactory()
     gold_card = gold_factory.create("John Doe")
     print(gold_card.get_card_type())
+
+    print(credit_card_database)
