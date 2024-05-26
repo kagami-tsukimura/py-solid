@@ -24,3 +24,11 @@ class Aggregate(metaclass=ABCMeta):
     @abstractmethod
     def get_iterator(self) -> IIterator:
         pass
+
+
+class WaitingRoom(Aggregate):
+    def __init__(self):
+        self.__patients = []
+
+    def get_patients(self) -> list[Patient]:
+        return self.__patients
