@@ -66,3 +66,21 @@ class PlatinumCreditCardFactory(CreditCardFactory):
 
     def register_credit_card(self, card: CreditCard) -> None:
         credit_card_database.append(card)
+
+
+class GoldCreditCardFactory(CreditCardFactory):
+    def create_credit_card(self, owner: str) -> CreditCard:
+        return Gold(owner)
+
+    def register_credit_card(self, card: CreditCard) -> None:
+        credit_card_database.append(card)
+
+
+if __name__ == "__main__":
+    platinum_factory = PlatinumCreditCardFactory()
+    gold_factory = GoldCreditCardFactory()
+
+    platinum_factory.create("John Doe")
+    gold_factory.create("Jane Doe")
+
+    print(credit_card_database)
