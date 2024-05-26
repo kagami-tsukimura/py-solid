@@ -16,3 +16,11 @@ class CreditCard(metaclass=ABCMeta):
     @abstractmethod
     def get_annual_charge(self) -> int:
         pass
+
+
+class Platinum(CreditCard):
+    def get_card_type(self) -> str:
+        return "Platinum"
+
+    def get_annual_charge(self) -> int:
+        return 500
