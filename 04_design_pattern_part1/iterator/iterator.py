@@ -60,3 +60,14 @@ class WaitingRoomIterator(IIterator):
         self.__position += 1
 
         return patient
+
+
+if __name__ == "__main__":
+    waiting_room = WaitingRoom()
+
+    waiting_room.check_in(Patient(1, "Taro"))
+    waiting_room.check_in(Patient(2, "Jiro"))
+    waiting_room.check_in(Patient(3, "Hanako"))
+
+    for patient in waiting_room.get_iterator():
+        print(patient)
