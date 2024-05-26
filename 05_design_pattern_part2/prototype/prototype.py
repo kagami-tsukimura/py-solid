@@ -54,8 +54,8 @@ if __name__ == "__main__":
     manager.register_item("mouse", mouse)
     manager.register_item("keyboard", keyboard)
 
-    mouse_copy = manager.create("mouse")
-    print(mouse_copy)
+    cloned_mouse = manager.create("mouse")
+    cloned_keyboard = manager.create("keyboard")
 
-    keyboard_copy = manager.create("keyboard")
-    print(keyboard_copy)
+    print(cloned_mouse)
+    print(cloned_keyboard)
