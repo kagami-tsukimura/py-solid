@@ -35,3 +35,12 @@ class ShallowCopyItem(ItemPrototype):
 class ItemManager:
     def __init__(self) -> None:
         self.items = {}
+
+    def register_item(self, key: str, item: ItemPrototype) -> None:
+        self.items[key] = item
+
+    def create(self, key: str) -> ItemPrototype:
+        if key in self.items:
+            item = self.items[key]
+            return item.create_copy()
+        raise Exception(f"{key} is not found.")
