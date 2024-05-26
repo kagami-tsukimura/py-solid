@@ -55,3 +55,8 @@ class WaitingRoomIterator(IIterator):
         if not self.has_next():
             print("患者がいません")
             return
+
+        patient = self.__aggregate.get_patients()[self.__position]
+        self.__position += 1
+
+        return patient
