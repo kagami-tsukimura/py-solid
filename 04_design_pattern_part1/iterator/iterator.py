@@ -45,5 +45,5 @@ class WaitingRoom(Aggregate):
 
 class WaitingRoomIterator(IIterator):
     def __init__(self, aggregate: WaitingRoom) -> None:
+        self.__position = 0
         self.__aggregate = aggregate
-        self.__index = 0
