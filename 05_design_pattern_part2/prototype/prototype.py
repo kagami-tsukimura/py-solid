@@ -44,3 +44,15 @@ class ItemManager:
             item = self.items[key]
             return item.create_copy()
         raise Exception(f"{key} is not found.")
+
+
+if __name__ == "__main__":
+    manager = ItemManager()
+    manager.register_item("deep", DeepCopyItem("deep"))
+    manager.register_item("shallow", ShallowCopyItem("shallow"))
+
+    deep = manager.create("deep")
+    shallow = manager.create("shallow")
+
+    print(deep)
+    print(shallow)
