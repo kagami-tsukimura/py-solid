@@ -22,4 +22,7 @@ class JsonToCsvAdapter(NewLibrary, Target):
         json_data = self.get_json_data()
 
         # keyをカンマ区切りで取得
-        header = ",".join(list(json_data[0].keys()))
+        header = ",".join(list(json_data[0].keys())) + "\n"
+        body = "\n".join([",".join(list(d.values())) for d in json_data])
+
+        return header + body
