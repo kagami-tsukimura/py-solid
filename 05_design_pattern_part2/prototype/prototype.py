@@ -57,5 +57,8 @@ if __name__ == "__main__":
     cloned_mouse = manager.create("mouse")
     cloned_keyboard = manager.create("keyboard")
 
+    cloned_mouse.set_review("nice mouse")
+    cloned_keyboard.set_review("good keyboard")
+
     print(cloned_mouse)
     print(cloned_keyboard)
