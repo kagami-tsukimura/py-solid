@@ -49,7 +49,7 @@ class WaitingRoomIterator(IIterator):
         self.__aggregate = aggregate
 
     def has_next(self) -> bool:
-        return self.__position < len(self.__aggregate.get_count())
+        return self.__position < self.__aggregate.get_count()
 
     def next(self) -> Patient:
         if not self.has_next():
@@ -64,10 +64,12 @@ class WaitingRoomIterator(IIterator):
 
 if __name__ == "__main__":
     waiting_room = WaitingRoom()
-
     waiting_room.check_in(Patient(1, "Taro"))
     waiting_room.check_in(Patient(2, "Jiro"))
     waiting_room.check_in(Patient(3, "Hanako"))
 
-    for patient in waiting_room.get_iterator():
-        print(patient)
+    iterator = waiting_room.get_iterator()
+    print(iterator.next())
+    print(iterator.next())
+    print(iterator.next())
+    print(iterator.next())
