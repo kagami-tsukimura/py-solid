@@ -18,3 +18,8 @@ class ItemPrototype(metaclass=ABCMeta):
     @abstractmethod
     def create_copy(self) -> ItemPrototype:
         pass
+
+
+class DeepCopyItem(ItemPrototype):
+    def create_copy(self) -> ItemPrototype:
+        return deepcopy(self)
