@@ -8,5 +8,6 @@ class Logger:
     # インスタンス生成のために作成（インスタンス生成前に実行）
     def __new__(cls):
         if cls._instance is None:
+            # インスタンス生成
             cls._instance = super().__new__(cls)
         return cls._instance
