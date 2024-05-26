@@ -23,3 +23,8 @@ class ItemPrototype(metaclass=ABCMeta):
 class DeepCopyItem(ItemPrototype):
     def create_copy(self) -> ItemPrototype:
         return deepcopy(self)
+
+
+class ShallowCopyItem(ItemPrototype):
+    def create_copy(self) -> ItemPrototype:
+        return self
