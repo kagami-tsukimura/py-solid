@@ -61,5 +61,7 @@ if __name__ == "__main__":
     cloned_mouse.set_review("boom..")
     cloned_keyboard.set_review("good!")
 
+    print(mouse)
     print(cloned_mouse)
+    print(keyboard)
     print(cloned_keyboard)
