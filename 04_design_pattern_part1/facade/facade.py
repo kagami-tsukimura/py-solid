@@ -10,4 +10,4 @@ class Payment:
 
 class Invoice:
     def send_invoice(self, name: str):
-        print(f"{name}の請求書を作成しました。")
+        print(f"{name}の請求書を送信しました。")
