@@ -47,12 +47,5 @@ class ItemManager:
 
 
 if __name__ == "__main__":
-    manager = ItemManager()
-    manager.register_item("deep", DeepCopyItem("deep"))
-    manager.register_item("shallow", ShallowCopyItem("shallow"))
-
-    deep = manager.create("deep")
-    shallow = manager.create("shallow")
-
-    print(deep)
-    print(shallow)
+    mouse = DeepCopyItem("mouse")
+    keyboard = ShallowCopyItem("keyboard")
