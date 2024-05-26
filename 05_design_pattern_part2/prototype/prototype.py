@@ -61,7 +61,7 @@ if __name__ == "__main__":
     cloned_mouse.set_review("boom..")
     cloned_keyboard.set_review("good!")
 
-    print(f"mouse(original): {mouse}")
-    print(f"mouse(deep copy): {cloned_mouse}")
-    print(f"keyboard(original): {keyboard}")
-    print(f"keyboard(shallow copy): {cloned_keyboard}")
+    print(f"(original){mouse}")
+    print(f"(deep copy){cloned_mouse}")
+    print(f"(original){keyboard}")
+    print(f"(shallow copy){cloned_keyboard}")
