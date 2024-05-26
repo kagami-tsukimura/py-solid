@@ -26,3 +26,9 @@ class JsonToCsvAdapter(NewLibrary, Target):
         body = "\n".join([",".join(list(d.values())) for d in json_data])
 
         return header + body
+
+
+if __name__ == "__main__":
+    adaptee = NewLibrary()
+    print("---adaptee---")
+    print(adaptee.get_json_data())
