@@ -7,11 +7,14 @@ class TestTemplate(metaclass=ABCMeta):
         self.execute()
         self.teardown()
 
+    @abstractmethod
     def setup(self) -> None:
         pass
 
+    @abstractmethod
     def execute(self) -> None:
         pass
 
+    @abstractmethod
     def teardown() -> None:
         pass
