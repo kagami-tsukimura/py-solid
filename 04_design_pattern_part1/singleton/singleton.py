@@ -11,3 +11,7 @@ class Logger:
             # インスタンス生成
             cls._instance = super().__new__(cls)
         return cls._instance
+
+    def output(self, content: str) -> None:
+        now = datetime.datetime.now()
+        print(f"[{now}]: {content}")
