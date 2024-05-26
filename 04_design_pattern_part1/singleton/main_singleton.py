@@ -8,5 +8,5 @@ if __name__ == "__main__":
     l1 = Logger()
     l2 = Logger()
     print(f"Singleton: {l1 == l2}")
-    l1.output("hello")
-    l2.output("world")
+    l1.output("hello: l1")
+    l2.output("world: l2")
