@@ -12,7 +12,9 @@ class ItemPrototype(metaclass=ABCMeta):
     def __str__(self) -> str:
         return f"{self.__name}: {self.__review}"
 
+    def set_review(self, review: str) -> None:
+        self.__review.append(review)
+
     @abstractmethod
-    def clone(self) -> ItemPrototype:
-        """原型を複製する"""
+    def create_copy(self) -> ItemPrototype:
         pass
