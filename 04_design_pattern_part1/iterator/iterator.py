@@ -8,3 +8,13 @@ class Patient:
 
     def __str__(self) -> str:
         return f"{self.id}: {self.name}"
+
+
+class IIterator(metaclass=ABCMeta):
+    @abstractmethod
+    def has_next(self) -> bool:
+        pass
+
+    @abstractmethod
+    def next(self) -> Patient:
+        pass
