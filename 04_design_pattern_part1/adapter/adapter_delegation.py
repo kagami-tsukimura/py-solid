@@ -17,9 +17,12 @@ class NewLibrary:
         ]
 
 
-class JsonToCsvAdapter(NewLibrary, Target):
+class JsonToCsvAdapter(Target):
+    def __init__(self, adaptee: NewLibrary) -> None:
+        self.__adaptee = adaptee
+
     def get_csv_data(self) -> str:
-        json_data = self.get_json_data()
+        json_data = self.__adaptee.get_json_data()
 
         # keyをカンマ区切りで取得
         header = ",".join(list(json_data[0].keys())) + "\n"
