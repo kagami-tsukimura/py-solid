@@ -23,3 +23,8 @@ class Order:
         invoice = Invoice()
         invoice.send_invoice(name)
         print("注文完了")
+
+
+if __name__ == "__main__":
+    order = Order()
+    order.place_order("商品A")
