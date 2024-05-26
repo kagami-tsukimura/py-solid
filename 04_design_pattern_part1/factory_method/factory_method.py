@@ -78,9 +78,9 @@ class GoldCreditCardFactory(CreditCardFactory):
 
 if __name__ == "__main__":
     platinum_factory = PlatinumCreditCardFactory()
+    platinum_card = platinum_factory.create("John Doe")
+    print(platinum_card.get_card_type())
+
     gold_factory = GoldCreditCardFactory()
-
-    platinum_factory.create("John Doe")
-    gold_factory.create("Jane Doe")
-
-    print(credit_card_database)
+    gold_card = gold_factory.create("John Doe")
+    print(gold_card.get_card_type())
