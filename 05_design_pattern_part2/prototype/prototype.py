@@ -49,3 +49,13 @@ class ItemManager:
 if __name__ == "__main__":
     mouse = DeepCopyItem("mouse")
     keyboard = ShallowCopyItem("keyboard")
+
+    manager = ItemManager()
+    manager.register_item("mouse", mouse)
+    manager.register_item("keyboard", keyboard)
+
+    mouse_copy = manager.create("mouse")
+    print(mouse_copy)
+
+    keyboard_copy = manager.create("keyboard")
+    print(keyboard_copy)
