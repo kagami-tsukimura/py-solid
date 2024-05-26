@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
-from copy import deepcopy
+from copy import copy, deepcopy
 
 
 class ItemPrototype(metaclass=ABCMeta):
@@ -29,4 +29,4 @@ class DeepCopyItem(ItemPrototype):
 class ShallowCopyItem(ItemPrototype):
     def create_copy(self) -> ItemPrototype:
         # 自分自身をshallow copy
-        return self
+        return copy(self)
