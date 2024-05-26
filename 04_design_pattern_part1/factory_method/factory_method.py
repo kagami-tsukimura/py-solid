@@ -23,4 +23,4 @@ class Platinum(CreditCard):
         return "Platinum"
 
     def get_annual_charge(self) -> int:
-        return 500
+        return 50000
