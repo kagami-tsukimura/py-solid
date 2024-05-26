@@ -32,3 +32,7 @@ if __name__ == "__main__":
     adaptee = NewLibrary()
     print("---adaptee---")
     print(adaptee.get_json_data())
+
+    adapter = JsonToCsvAdapter()
+    print("---adapter---")
+    print(adapter.get_csv_data())
