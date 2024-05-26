@@ -58,3 +58,11 @@ class CreditCardFactory(CreditCardFactory):
 
 
 credit_card_database: list[CreditCard] = []
+
+
+class PlatinumCreditCardFactory(CreditCardFactory):
+    def create_credit_card(self, owner: str) -> CreditCard:
+        return Platinum(owner)
+
+    def register_credit_card(self, card: CreditCard) -> None:
+        credit_card_database.append(card)
