@@ -15,5 +15,5 @@ class TestTemplate(metaclass=ABCMeta):
     def execute(self) -> None:
         pass
 
-    def teardown() -> None:
+    def teardown(self) -> None:
         print("teardown")
