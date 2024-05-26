@@ -47,3 +47,11 @@ class WaitingRoomIterator(IIterator):
     def __init__(self, aggregate: WaitingRoom) -> None:
         self.__position = 0
         self.__aggregate = aggregate
+
+    def has_next(self) -> bool:
+        return self.__position < len(self.__aggregate.get_patients())
+
+    def next(self) -> Patient:
+        patient = self.__aggregate.get_patients()[self.__position]
+        self.__position += 1
+        return patient
