@@ -32,3 +32,13 @@ class Gold(CreditCard):
 
     def get_annual_charge(self) -> int:
         return 10000
+
+
+class CreditCardFactory(metaclass=ABCMeta):
+    @abstractmethod
+    def create_credit_card(self, owner: str) -> CreditCard:
+        pass
+
+    @abstractmethod
+    def register_credit_card(self, card: CreditCard) -> None:
+        pass
