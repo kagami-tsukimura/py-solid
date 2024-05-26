@@ -10,4 +10,16 @@ class Target(metaclass=ABCMeta):
 class NewLibrary:
     # return: key: str, value: strの辞書型配列
     def get_json_data(self) -> list[dict[str, str]]:
-        pass
+        return [
+            {"key1": "json1", "key2": "json2"},
+            {"key3": "json3", "key4": "json4"},
+            {"key5": "json5", "key6": "json6"},
+        ]
+
+
+class JsonToCsvAdapter(NewLibrary, Target):
+    def get_csv_data(self) -> str:
+        json_data = self.get_json_data()
+
+        # keyをカンマ区切りで取得
+        header = ",".join(list(json_data[0].keys()))
