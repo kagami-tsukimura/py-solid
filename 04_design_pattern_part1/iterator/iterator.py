@@ -49,9 +49,9 @@ class WaitingRoomIterator(IIterator):
         self.__aggregate = aggregate
 
     def has_next(self) -> bool:
-        return self.__position < len(self.__aggregate.get_patients())
+        return self.__position < len(self.__aggregate.get_count())
 
     def next(self) -> Patient:
-        patient = self.__aggregate.get_patients()[self.__position]
-        self.__position += 1
-        return patient
+        if not self.has_next():
+            print("患者がいません")
+            return
