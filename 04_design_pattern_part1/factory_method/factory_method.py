@@ -24,3 +24,11 @@ class Platinum(CreditCard):
 
     def get_annual_charge(self) -> int:
         return 50000
+
+
+class Gold(CreditCard):
+    def get_card_type(self) -> str:
+        return "Gold"
+
+    def get_annual_charge(self) -> int:
+        return 10000
