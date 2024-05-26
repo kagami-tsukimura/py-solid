@@ -35,3 +35,9 @@ class WaitingRoom(Aggregate):
 
     def get_count(self) -> int:
         return len(self.__patients)
+
+    def check_in() -> None:
+        pass
+
+    def get_iterator(self) -> IIterator:
+        return super().get_iterator()
