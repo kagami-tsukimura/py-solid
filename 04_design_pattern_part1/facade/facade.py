@@ -26,6 +26,11 @@ class Order:
 
 
 if __name__ == "__main__":
-    name = "design pattern"
+    name1 = "design pattern"
     order = Order()
-    order.place_order(name)
+    order.place_order(name1)
+
+    print("-----")
+
+    name2 = "デザインパターン"
+    order.place_order(name2)
