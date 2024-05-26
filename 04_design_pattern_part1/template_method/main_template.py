@@ -6,4 +6,5 @@ if __name__ == "__main__":
     user_service = UserService()
 
     item_service.test()
+    print("----------")
     user_service.test()
