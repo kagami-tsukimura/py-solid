@@ -30,3 +30,8 @@ class ShallowCopyItem(ItemPrototype):
     def create_copy(self) -> ItemPrototype:
         # 自分自身をshallow copy
         return copy(self)
+
+
+class ItemManager:
+    def __init__(self) -> None:
+        self.items = {}
