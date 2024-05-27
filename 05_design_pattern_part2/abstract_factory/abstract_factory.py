@@ -41,9 +41,33 @@ class WindowsGUIFactory(GUIFactory):
         return WindowsCheckbox()
 
 
+class MacButton(Button):
+    def press(self) -> None:
+        print("MacButton is pressed")
+
+
+class MacCheckbox(Checkbox):
+    def switch(self) -> None:
+        print("MacCheckbox is switched")
+
+
+class MacGUIFactory(GUIFactory):
+    def create_button(self) -> Button:
+        return MacButton()
+
+    def create_checkbox(self) -> Checkbox:
+        return MacCheckbox()
+
+
 if __name__ == "__main__":
-    factory = WindowsGUIFactory()
-    button = factory.create_button()
-    checkbox = factory.create_checkbox()
-    button.press()
-    checkbox.switch()
+    windows_factory = WindowsGUIFactory()
+    windows_button = windows_factory.create_button()
+    windows_checkbox = windows_factory.create_checkbox()
+    windows_button.press()
+    windows_checkbox.switch()
+
+    mac_factory = MacGUIFactory()
+    mac_button = mac_factory.create_button()
+    mac_checkbox = mac_factory.create_checkbox()
+    mac_button.press()
+    mac_checkbox.switch()
