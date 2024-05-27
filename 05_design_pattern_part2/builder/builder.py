@@ -62,3 +62,16 @@ class Director:
     def high_spec_construct(self) -> None:
         self.__builder.add_cpu("AMD Ryzen9")
         self.__builder.add_ram(64)
+
+
+if __name__ == "__main__":
+    builder = DesktopBuilder()
+    director = Director(builder)
+    director.construct()
+    computer = builder.get_result()
+    print(computer)
+
+    builder = LaptopBuilder()
+    director.high_spec_construct()
+    computer = builder.get_result()
+    print(computer)
