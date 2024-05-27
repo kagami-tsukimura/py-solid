@@ -3,7 +3,7 @@ from abc import ABCMeta, abstractmethod
 
 class Checkbox(metaclass=ABCMeta):
     @abstractmethod
-    def draw(self) -> None:
+    def switch(self) -> None:
         pass
 
 
