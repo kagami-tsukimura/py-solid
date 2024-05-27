@@ -32,5 +32,5 @@ class DesktopBuilder(ComputerBuilder):
     def add_ram(self, ram: int) -> None:
         self.__computer.ram = ram
 
-    def get_computer(self) -> Computer:
+    def get_result(self) -> Computer:
         return self.__computer
