@@ -21,3 +21,10 @@ class ShoppingCart:
     def __init__(self) -> None:
         self.__total = 0
         self.__items = []
+
+    def add_item(self, item: str, price: int) -> None:
+        self.__total += price
+        self.__items.append((item, price))
+
+    def pay(self, payment_strategy: PaymentStrategy) -> None:
+        payment_strategy.pay(self.__total)
