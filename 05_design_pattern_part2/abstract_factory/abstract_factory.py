@@ -77,6 +77,13 @@ class LinuxGUIFactory(GUIFactory):
         return LinuxCheckbox()
 
 
+def run(factory: GUIFactory) -> None:
+    button = factory.create_button()
+    checkbox = factory.create_checkbox()
+    button.press()
+    checkbox.switch()
+
+
 if __name__ == "__main__":
     windows_factory = WindowsGUIFactory()
     windows_button = windows_factory.create_button()
