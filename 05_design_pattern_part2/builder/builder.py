@@ -17,5 +17,19 @@ class ComputerBuilder(metaclass=ABCMeta):
         pass
 
     @abstractmethod
-    def add_ram(self, ram: str) -> None:
+    def add_ram(self, ram: int) -> None:
         pass
+
+
+class DesktopBuilder(ComputerBuilder):
+    def __init__(self):
+        self.computer = Computer()
+
+    def add_cpu(self, cpu: str) -> None:
+        self.computer.cpu = cpu
+
+    def add_ram(self, ram: int) -> None:
+        self.computer.ram = ram
+
+    def get_computer(self) -> Computer:
+        return self.computer
