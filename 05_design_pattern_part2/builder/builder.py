@@ -49,3 +49,12 @@ class LaptopBuilder(ComputerBuilder):
 
     def get_result(self) -> Computer:
         return self.__computer
+
+
+class Director:
+    def __init__(self, builder: ComputerBuilder) -> None:
+        self.__builder = builder
+
+    def construct(self, builder: ComputerBuilder) -> None:
+        self.__builder = builder
+        self.__builder.add_cpu("Intel")
