@@ -35,3 +35,4 @@ if __name__ == "__main__":
     shopping_cart.add_item("Shirt", 100)
     shopping_cart.add_item("Pants", 200)
     shopping_cart.pay(CreditCardPaymentStrategy())
+    shopping_cart.pay(CashPaymentStrategy())
