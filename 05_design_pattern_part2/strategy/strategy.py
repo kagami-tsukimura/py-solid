@@ -19,5 +19,5 @@ class CashPaymentStrategy(PaymentStrategy):
 
 class ShoppingCart:
     def __init__(self) -> None:
-        self.total = 0
-        self.items = []
+        self.__total = 0
+        self.__items = []
