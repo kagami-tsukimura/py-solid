@@ -6,3 +6,6 @@ class Computer:
         self.type = None
         self.cpu = None
         self.ram = None
+
+    def __str__(self):
+        return f"{self.type} {self.cpu} {self.ram}"
