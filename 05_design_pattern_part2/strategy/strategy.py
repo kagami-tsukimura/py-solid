@@ -38,5 +38,5 @@ if __name__ == "__main__":
     shopping_cart.pay(credit_payment_strategy)
     shopping_cart.add_item("Shirt", 1000)
     shopping_cart.add_item("Pants", 2000)
-    cash_payment_strategy = CreditCardPaymentStrategy()
+    cash_payment_strategy = CashPaymentStrategy()
     shopping_cart.pay(cash_payment_strategy)
