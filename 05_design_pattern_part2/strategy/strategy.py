@@ -7,6 +7,11 @@ class PaymentStrategy(metaclass=ABCMeta):
         pass
 
 
+class CreditCardPaymentStrategy(PaymentStrategy):
+    def pay(self, amount: int) -> None:
+        print(f"Paid in CreditCard for {amount}.")
+
+
 class CashPaymentStrategy(PaymentStrategy):
     def pay(self, amount: int) -> None:
-        print(f"Paid in cash for {amount}.")
+        print(f"Paid in Cash for {amount}.")
