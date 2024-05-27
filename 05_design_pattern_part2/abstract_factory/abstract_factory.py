@@ -89,3 +89,9 @@ if __name__ == "__main__":
     mac_checkbox = mac_factory.create_checkbox()
     mac_button.press()
     mac_checkbox.switch()
+
+    linux_factory = LinuxGUIFactory()
+    linux_button = linux_factory.create_button()
+    linux_checkbox = linux_factory.create_checkbox()
+    linux_button.press()
+    linux_checkbox.switch()
