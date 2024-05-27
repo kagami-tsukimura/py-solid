@@ -13,13 +13,9 @@ class Computer:
 
 class ComputerBuilder(metaclass=ABCMeta):
     @abstractmethod
-    def set_type(self) -> None:
+    def add_cpu(self, cpu: str) -> None:
         pass
 
     @abstractmethod
-    def set_cpu(self) -> None:
-        pass
-
-    @abstractmethod
-    def set_ram(self) -> None:
+    def add_ram(self, ram: str) -> None:
         pass
