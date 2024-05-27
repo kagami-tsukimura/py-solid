@@ -15,3 +15,9 @@ class CreditCardPaymentStrategy(PaymentStrategy):
 class CashPaymentStrategy(PaymentStrategy):
     def pay(self, amount: int) -> None:
         print(f"Paid in Cash for {amount}.")
+
+
+class ShoppingCart:
+    def __init__(self) -> None:
+        self.total = 0
+        self.items = []
