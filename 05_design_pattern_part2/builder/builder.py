@@ -34,3 +34,18 @@ class DesktopBuilder(ComputerBuilder):
 
     def get_result(self) -> Computer:
         return self.__computer
+
+
+class LaptopBuilder(ComputerBuilder):
+    def __init__(self):
+        self.__computer = Computer()
+        self.__computer.type = "Laptop"
+
+    def add_cpu(self, cpu: str) -> None:
+        self.__computer.cpu = cpu
+
+    def add_ram(self, ram: int) -> None:
+        self.__computer.ram = ram
+
+    def get_result(self) -> Computer:
+        return self.__computer
