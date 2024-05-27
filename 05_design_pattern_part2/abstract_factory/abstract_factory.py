@@ -9,5 +9,5 @@ class Checkbox(metaclass=ABCMeta):
 
 class Button(metaclass=ABCMeta):
     @abstractmethod
-    def draw(self) -> None:
+    def press(self) -> None:
         pass
