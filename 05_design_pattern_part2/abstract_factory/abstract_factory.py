@@ -86,10 +86,7 @@ def run(factory: GUIFactory) -> None:
 
 if __name__ == "__main__":
     windows_factory = WindowsGUIFactory()
-    windows_button = windows_factory.create_button()
-    windows_checkbox = windows_factory.create_checkbox()
-    windows_button.press()
-    windows_checkbox.switch()
+    run(windows_factory)
 
     mac_factory = MacGUIFactory()
     mac_button = mac_factory.create_button()
