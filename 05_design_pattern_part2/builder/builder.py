@@ -55,6 +55,5 @@ class Director:
     def __init__(self, builder: ComputerBuilder) -> None:
         self.__builder = builder
 
-    def construct(self, builder: ComputerBuilder) -> None:
-        self.__builder = builder
+    def construct(self) -> None:
         self.__builder.add_cpu("Intel")
