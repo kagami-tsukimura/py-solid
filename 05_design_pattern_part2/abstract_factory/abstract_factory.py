@@ -59,6 +59,24 @@ class MacGUIFactory(GUIFactory):
         return MacCheckbox()
 
 
+class LinuxButton(Button):
+    def press(self) -> None:
+        print("LinuxButton is pressed")
+
+
+class LinuxCheckbox(Checkbox):
+    def switch(self) -> None:
+        print("LinuxCheckbox is switched")
+
+
+class LinuxGUIFactory(GUIFactory):
+    def create_button(self) -> Button:
+        return LinuxButton()
+
+    def create_checkbox(self) -> Checkbox:
+        return LinuxCheckbox()
+
+
 if __name__ == "__main__":
     windows_factory = WindowsGUIFactory()
     windows_button = windows_factory.create_button()
