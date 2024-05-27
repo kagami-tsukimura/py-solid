@@ -86,5 +86,7 @@ def run(factory: GUIFactory) -> None:
 
 if __name__ == "__main__":
     run(WindowsGUIFactory())
+    print("------")
     run(MacGUIFactory())
+    print("------")
     run(LinuxGUIFactory())
