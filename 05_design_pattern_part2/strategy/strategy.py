@@ -28,3 +28,10 @@ class ShoppingCart:
 
     def pay(self, payment_strategy: PaymentStrategy) -> None:
         payment_strategy.pay(self.__total)
+
+
+if __name__ == "__main__":
+    shopping_cart = ShoppingCart()
+    shopping_cart.add_item("Shirt", 100)
+    shopping_cart.add_item("Pants", 200)
+    shopping_cart.pay(CreditCardPaymentStrategy())
