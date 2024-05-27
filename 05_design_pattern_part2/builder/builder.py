@@ -65,13 +65,14 @@ class Director:
 
 
 if __name__ == "__main__":
-    builder = DesktopBuilder()
-    director = Director(builder)
-    director.construct()
-    computer = builder.get_result()
-    print(computer)
+    desktop_builder = DesktopBuilder()
+    desktop_director = Director(desktop_builder)
+    desktop_director.construct()
+    desktop_computer = desktop_builder.get_result()
+    print(desktop_computer)
 
-    builder = LaptopBuilder()
-    director.high_spec_construct()
-    computer = builder.get_result()
-    print(computer)
+    laptop_builder = LaptopBuilder()
+    laptop_director = Director(laptop_builder)
+    laptop_director.high_spec_construct()
+    laptop_computer = laptop_builder.get_result()
+    print(laptop_computer)
