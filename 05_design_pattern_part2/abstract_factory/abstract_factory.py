@@ -85,11 +85,6 @@ def run(factory: GUIFactory) -> None:
 
 
 if __name__ == "__main__":
-    windows_factory = WindowsGUIFactory()
-    run(windows_factory)
-
-    mac_factory = MacGUIFactory()
-    run(mac_factory)
-
-    linux_factory = LinuxGUIFactory()
-    run(linux_factory)
+    run(WindowsGUIFactory())
+    run(MacGUIFactory())
+    run(LinuxGUIFactory())
