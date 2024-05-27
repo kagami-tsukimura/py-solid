@@ -56,8 +56,9 @@ class Director:
         self.__builder = builder
 
     def construct(self) -> None:
-        self.__builder.add_cpu("Intel")
+        self.__builder.add_cpu("Intel Core i5")
+        self.__builder.add_ram(16)
 
     def high_spec_construct(self) -> None:
-        self.__builder.add_cpu("AMD")
-        self.__builder.add_ram(16)
+        self.__builder.add_cpu("AMD Ryzen 9")
+        self.__builder.add_ram(64)
