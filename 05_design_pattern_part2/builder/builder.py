@@ -23,13 +23,14 @@ class ComputerBuilder(metaclass=ABCMeta):
 
 class DesktopBuilder(ComputerBuilder):
     def __init__(self):
-        self.computer = Computer()
+        self.__computer = Computer()
+        self.__computer.type = "Desktop"
 
     def add_cpu(self, cpu: str) -> None:
-        self.computer.cpu = cpu
+        self.__computer.cpu = cpu
 
     def add_ram(self, ram: int) -> None:
-        self.computer.ram = ram
+        self.__computer.ram = ram
 
     def get_computer(self) -> Computer:
-        return self.computer
+        return self.__computer
