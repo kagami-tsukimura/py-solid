@@ -8,3 +8,6 @@ from abc import ABCMeta, abstractmethod
 class ValidationHandler(metaclass=ABCMeta):
     def __init__(self):
         self.__next_handler = None
+
+    def set_handler(self, handler: ValidationHandler) -> None:
+        self.__next_handler = handler
