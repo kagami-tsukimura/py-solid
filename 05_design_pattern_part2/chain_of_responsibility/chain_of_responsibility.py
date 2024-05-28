@@ -32,3 +32,11 @@ class ValidationHandler(metaclass=ABCMeta):
             return self.__next_handler.validate(input)
         else:
             return True
+
+
+class NotNullValidationHandler(ValidationHandler):
+    def _exec_validation(self, input: str) -> bool:
+        return bool(input)
+
+    def _get_error_message(self) -> None:
+        print("入力値を入力してください。")
