@@ -53,13 +53,9 @@ class AlphabetValidationHandler(ValidationHandler):
 
 
 class MinLengthValidationHandler(ValidationHandler):
-    def __init__(self, length: int):
-        super().__init__()
-        self.__length = length
-
     def _exec_validation(self, input: str) -> bool:
-        print(f"MinLengthValidationHandler: {len(input) >= self.__length}")
-        return len(input) >= self.__length
+        print(f"MinLengthValidationHandler: {len(input) >= 8}")
+        return len(input) >= 8
 
     def _get_error_message(self) -> None:
-        print(f"最低 {self.__length} 文字以上を入力してください。")
+        print("最低8文字以上を入力してください。")
