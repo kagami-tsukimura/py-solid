@@ -28,5 +28,7 @@ class ValidationHandler(metaclass=ABCMeta):
             self._get_error_message()
             return False
         elif self.__next_handler:
+            # handlerがなくなるまで処理を繰り返す
             return self.__next_handler.validate(input)
-        return True
+        else:
+            return True
