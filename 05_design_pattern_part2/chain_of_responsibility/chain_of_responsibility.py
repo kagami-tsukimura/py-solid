@@ -13,3 +13,11 @@ class ValidationHandler(metaclass=ABCMeta):
         self.__next_handler = handler
         # メソッドチェイン
         return handler
+
+    @abstractmethod
+    def exec_validation(self, input: str) -> bool:
+        pass
+
+    @abstractmethod
+    def get_error_message(self) -> None:
+        pass
