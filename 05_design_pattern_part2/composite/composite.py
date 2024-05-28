@@ -43,3 +43,13 @@ class Directory(Entry):
 
     def add(self, entry: Entry) -> None:
         self.__children.append(entry)
+
+
+if __name__ == "__main__":
+    file1 = File("file1", 1024)
+    file2 = File("file2", 2048)
+    dir1 = Directory("dir1")
+    dir1.add(file1)
+    dir1.add(file2)
+    dir1.remove()
+    print(dir1.get_size())
