@@ -16,3 +16,9 @@ class Entry(metaclass=ABCMeta):
     @abstractmethod
     def remove(self) -> None:
         pass
+
+
+class File(Entry):
+    def __init__(self, name: str, size: int) -> None:
+        super().__init__(name)
+        self.__size = size
