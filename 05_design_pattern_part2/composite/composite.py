@@ -46,6 +46,12 @@ class Directory(Entry):
         self.__children.append(entry)
 
 
+def client(entry: Entry) -> None:
+    print(entry.name)
+    print(entry.get_size())
+    entry.remove()
+
+
 if __name__ == "__main__":
     file1 = File("file1", 1024)
     file2 = File("file2", 2048)
