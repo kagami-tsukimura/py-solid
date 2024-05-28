@@ -34,3 +34,12 @@ class Directory(Entry):
     def __init__(self, name: str) -> None:
         super().__init__(name)
         self.__children: list[Entry] = []
+
+    def get_size(self) -> int:
+        return sum(child.get_size() for child in self.__children)
+
+    def remove(self) -> None:
+        print(f"remove directory: {self.name}")
+
+    def add(self, entry: Entry) -> None:
+        self.__children.append(entry)
