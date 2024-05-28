@@ -65,7 +65,7 @@ if __name__ == "__main__":
     not_null = NotNullValidationHandler()
     alphabet = AlphabetValidationHandler()
     min_length = MinLengthValidationHandler()
-    not_null.set_handler(alphabet)
-    not_null.set_handler(min_length)
-    not_null.validate("hoge")
-    min_length.validate("h123456oge")
+    not_null.set_handler(alphabet).set_handler(min_length)
+    result = not_null.validate("")
+    if result:
+        print("All Validation are OK")
