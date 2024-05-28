@@ -50,3 +50,16 @@ class AlphabetValidationHandler(ValidationHandler):
 
     def _get_error_message(self) -> None:
         print("英字のみを入力してください。")
+
+
+class MinLengthValidationHandler(ValidationHandler):
+    def __init__(self, length: int):
+        super().__init__()
+        self.__length = length
+
+    def _exec_validation(self, input: str) -> bool:
+        print(f"MinLengthValidationHandler: {len(input) >= self.__length}")
+        return len(input) >= self.__length
+
+    def _get_error_message(self) -> None:
+        print(f"最低 {self.__length} 文字以上を入力してください。")
