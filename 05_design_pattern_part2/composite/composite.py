@@ -53,10 +53,12 @@ def client(entry: Entry) -> None:
 
 
 if __name__ == "__main__":
-    root = Directory("root")
-    root.add(File("file1", 10))
-    root.add(File("file2", 20))
-    root.add(Directory("dir1"))
-    root.add(Directory("dir2"))
+    composite_dir1 = Directory("design_pattern")
+    composite_dir2 = Directory("composite")
+    file1 = File("composite.py", 100)
+    file1 = File("practice.png", 150)
 
-    client(root)
+    composite_dir2.add(file1)
+    composite_dir1.add(composite_dir2)
+
+    client(composite_dir1)
