@@ -33,3 +33,5 @@ if __name__ == "__main__":
     light = LightSwitch()
     light.switch()
     light.switch()
+    light.switch()
+    light.switch()
