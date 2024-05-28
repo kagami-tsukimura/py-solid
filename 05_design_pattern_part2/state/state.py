@@ -30,8 +30,8 @@ class LightSwitch:
 
 
 if __name__ == "__main__":
-    light = LightSwitch()
-    light.switch()
-    light.switch()
-    light.switch()
-    light.switch()
+    light_switch = LightSwitch()
+    light_switch.switch()
+    light_switch.switch()
+    light_switch.switch()
+    light_switch.switch()
