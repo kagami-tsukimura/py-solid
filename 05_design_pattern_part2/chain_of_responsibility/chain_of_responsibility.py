@@ -21,3 +21,10 @@ class ValidationHandler(metaclass=ABCMeta):
     @abstractmethod
     def get_error_message(self) -> None:
         pass
+
+    def validate(self, input: str) -> bool:
+        if self.exec_validation(input):
+            return True
+        if self.__next_handler:
+            return self.__next_handler.validate(input)
+        return False
