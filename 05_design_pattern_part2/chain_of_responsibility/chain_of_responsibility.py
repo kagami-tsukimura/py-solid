@@ -36,6 +36,7 @@ class ValidationHandler(metaclass=ABCMeta):
 
 class NotNullValidationHandler(ValidationHandler):
     def _exec_validation(self, input: str) -> bool:
+        print(f"NotNullValidationHandler: {bool(input)}")
         return bool(input)
 
     def _get_error_message(self) -> None:
