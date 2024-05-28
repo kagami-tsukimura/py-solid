@@ -22,3 +22,6 @@ class File(Entry):
     def __init__(self, name: str, size: int) -> None:
         super().__init__(name)
         self.__size = size
+
+    def get_size(self) -> int:
+        return self.__size
