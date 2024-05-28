@@ -15,16 +15,18 @@ class ValidationHandler(metaclass=ABCMeta):
         return handler
 
     @abstractmethod
-    def exec_validation(self, input: str) -> bool:
+    def _exec_validation(self, input: str) -> bool:
         pass
 
     @abstractmethod
-    def get_error_message(self) -> None:
+    def _get_error_message(self) -> None:
         pass
 
     def validate(self, input: str) -> bool:
-        if self.exec_validation(input):
-            return True
-        if self.__next_handler:
+        result = self._exec_validation(input)
+        if not result:
+            self._get_error_message()
+            return False
+        elif self.__next_handler:
             return self.__next_handler.validate(input)
-        return False
+        return True
