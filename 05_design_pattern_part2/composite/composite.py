@@ -25,3 +25,6 @@ class File(Entry):
 
     def get_size(self) -> int:
         return self.__size
+
+    def remove(self) -> None:
+        print(f"remove file: {self.name}")
