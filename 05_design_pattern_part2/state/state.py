@@ -22,14 +22,14 @@ class OnState(LightState):
 
 
 class LightSwitch:
-    def __init__(self, state: LightState) -> None:
-        self.state = state
+    def __init__(self) -> None:
+        self.__state = OffState()
 
     def switch(self) -> None:
-        self.state.switch()
+        self.__state.switch()
 
 
 if __name__ == "__main__":
-    light = LightSwitch(OffState())
+    light = LightSwitch()
     light.switch()
     light.switch()
