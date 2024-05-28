@@ -11,4 +11,5 @@ class ValidationHandler(metaclass=ABCMeta):
 
     def set_handler(self, handler: ValidationHandler) -> None:
         self.__next_handler = handler
+        # メソッドチェイン
         return handler
