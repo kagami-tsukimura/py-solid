@@ -79,4 +79,4 @@ if __name__ == "__main__":
     result = not_null.validate("asdfghjkl")
 
     if result:
-        print("All Validation are OK")
+        print("All Validation are OK!!!")
