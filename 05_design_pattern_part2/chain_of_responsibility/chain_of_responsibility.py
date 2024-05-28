@@ -66,6 +66,11 @@ if __name__ == "__main__":
     alphabet = AlphabetValidationHandler()
     min_length = MinLengthValidationHandler()
     not_null.set_handler(alphabet).set_handler(min_length)
-    result = not_null.validate("")
+    # # not null
+    # result = not_null.validate("")
+
+    # alphabet
+    result = not_null.validate("あああabc")
+
     if result:
         print("All Validation are OK")
