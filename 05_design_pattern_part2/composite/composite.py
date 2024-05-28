@@ -53,10 +53,10 @@ def client(entry: Entry) -> None:
 
 
 if __name__ == "__main__":
-    file1 = File("file1", 1024)
-    file2 = File("file2", 2048)
-    dir1 = Directory("dir1")
-    dir1.add(file1)
-    dir1.add(file2)
-    dir1.remove()
-    print(dir1.get_size())
+    root = Directory("root")
+    root.add(File("file1", 10))
+    root.add(File("file2", 20))
+    root.add(Directory("dir1"))
+    root.add(Directory("dir2"))
+
+    client(root)
