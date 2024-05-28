@@ -28,3 +28,9 @@ class File(Entry):
 
     def remove(self) -> None:
         print(f"remove file: {self.name}")
+
+
+class Directory(Entry):
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
+        self.__children: list[Entry] = []
