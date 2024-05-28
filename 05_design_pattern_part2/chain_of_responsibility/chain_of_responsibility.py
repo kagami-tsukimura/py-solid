@@ -59,3 +59,13 @@ class MinLengthValidationHandler(ValidationHandler):
 
     def _get_error_message(self) -> None:
         print("最低8文字以上を入力してください。")
+
+
+if __name__ == "__main__":
+    not_null = NotNullValidationHandler()
+    alphabet = AlphabetValidationHandler()
+    min_length = MinLengthValidationHandler()
+    not_null.set_handler(alphabet)
+    not_null.set_handler(min_length)
+    not_null.validate("hoge")
+    min_length.validate("h123456oge")
