@@ -41,3 +41,12 @@ class NotNullValidationHandler(ValidationHandler):
 
     def _get_error_message(self) -> None:
         print("入力値を入力してください。")
+
+
+class AlphabetValidationHandler(ValidationHandler):
+    def _exec_validation(self, input: str) -> bool:
+        print(f"AlphabetValidationHandler: {re.match('[a-zA-Z]+', input)}")
+        return re.match("[a-zA-Z]+", input)
+
+    def _get_error_message(self) -> None:
+        print("英字のみを入力してください。")
