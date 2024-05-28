@@ -39,8 +39,7 @@ class Directory(Entry):
         return sum(child.get_size() for child in self.__children)
 
     def remove(self) -> None:
-        for child in self.__children:
-            child.remove()
+        [child.remove() for child in self.__children]
         print(f"remove directory: {self.name}")
 
     def add(self, entry: Entry) -> None:
