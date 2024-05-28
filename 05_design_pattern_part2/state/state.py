@@ -26,7 +26,7 @@ class LightSwitch:
         self.__state = OffState()
 
     def switch(self) -> None:
-        self.__state.switch()
+        self.__state = self.__state.switch()
 
 
 if __name__ == "__main__":
