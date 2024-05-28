@@ -72,8 +72,11 @@ if __name__ == "__main__":
     # # alphabet
     # result = not_null.validate("あああabc")
 
-    # min length
-    result = not_null.validate("edf")
+    # # min length
+    # result = not_null.validate("edf")
+
+    # all ok
+    result = not_null.validate("asdfghjkl")
 
     if result:
         print("All Validation are OK")
