@@ -56,7 +56,7 @@ if __name__ == "__main__":
     composite_dir1 = Directory("design_pattern")
     composite_dir2 = Directory("composite")
     file1 = File("composite.py", 100)
-    file1 = File("practice.png", 150)
+    file2 = File("practice.png", 150)
 
     composite_dir2.add(file1)
     composite_dir1.add(composite_dir2)
