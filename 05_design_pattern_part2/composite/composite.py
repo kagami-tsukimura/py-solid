@@ -59,6 +59,7 @@ if __name__ == "__main__":
     file2 = File("practice.png", 150)
 
     composite_dir2.add(file1)
+    composite_dir2.add(file2)
     composite_dir1.add(composite_dir2)
 
     client(composite_dir1)
