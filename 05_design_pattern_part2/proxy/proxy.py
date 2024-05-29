@@ -2,6 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 
 class Server(metaclass=ABCMeta):
+    @abstractmethod
     def handle(self, user_id: str) -> None:
         pass
 
@@ -38,5 +39,5 @@ if __name__ == "__main__":
     user_id = "3"
     proxy.handle(user_id)
 
-    # user_id = "4"
-    # proxy.handle(user_id)
+    user_id = "4"
+    proxy.handle(user_id)
