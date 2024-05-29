@@ -32,3 +32,13 @@ class OS(metaclass=ABCMeta):
     @abstractmethod
     def send_message(self) -> None:
         pass
+
+
+class IOS(OS):
+    def send_message(self) -> None:
+        self._app.send("Hello, iOS")
+
+
+class Android(OS):
+    def send_message(self) -> None:
+        self._app.send("Hello, Android")
