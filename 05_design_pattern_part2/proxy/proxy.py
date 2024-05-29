@@ -22,6 +22,4 @@ class Proxy(Server):
 
     def handle(self, user_id: str) -> None:
         self._authorize(user_id)
-        self.__server.handle(user_id)
-
         print(f"Proxy: handle request for {user_id}")
