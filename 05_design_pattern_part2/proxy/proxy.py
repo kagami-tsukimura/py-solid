@@ -34,3 +34,9 @@ if __name__ == "__main__":
 
     user_id = "1"
     proxy.handle(user_id)
+
+    user_id = "3"
+    proxy.handle(user_id)
+
+    user_id = "4"
+    proxy.handle(user_id)
