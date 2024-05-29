@@ -11,6 +11,4 @@ class StampFactory:
         self.__pool = {}
 
     def get_stamp(self, char: str) -> Stamp:
-        if char not in self.__pool:
-            self.__pool[char] = Stamp(char)
-        return self.__pool[char]
+        stamp = self.__pool.get(char)
