@@ -15,3 +15,8 @@ class LINE(MessageApp):
 class X(MessageApp):
     def send(self, message: str) -> None:
         print(f"[X] {message}")
+
+
+class Facebook(MessageApp):
+    def send(self, message: str) -> None:
+        print(f"[Facebook] {message}")
