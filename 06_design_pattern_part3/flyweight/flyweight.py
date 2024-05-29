@@ -29,6 +29,8 @@ if __name__ == "__main__":
     stamp1 = factory.get_stamp("A")
     stamp2 = factory.get_stamp("B")
     stamp3 = factory.get_stamp("C")
+    stamp3 = factory.get_stamp("C")
+    stamp3 = factory.get_stamp("C")
 
     stamp1.print_char()
     stamp2.print_char()
