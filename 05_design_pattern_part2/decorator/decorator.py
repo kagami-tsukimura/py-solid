@@ -27,5 +27,10 @@ class Decorator(Component):
 
 class TimestampDecorator(Decorator):
 
+    def __init__(self, component: Component):
+        super().__init__(component)
+
     def get_log_message(self, msg: str) -> str:
-        return f"{datetime.datetime.now()}: {msg}"
+        now = datetime.datetime.now()
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+        return self._component.get_log_message(f"[{timestamp}]: {msg}")
