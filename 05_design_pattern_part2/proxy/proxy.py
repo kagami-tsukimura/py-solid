@@ -17,7 +17,7 @@ class Proxy(Server):
 
     def _authorize(self, user_id: str) -> None:
         authorized_user_id = ["1", "2", "3"]
-        if not user_id in authorized_user_id:
+        if user_id not in authorized_user_id:
             raise Exception("Unauthorized user")
 
     def handle(self, user_id: str) -> None:
@@ -26,3 +26,11 @@ class Proxy(Server):
         print(f"Proxy: handle request for {user_id}")
         self.__server.handle(user_id)
         print(f"Proxy: done handling request for {user_id}")
+
+
+if __name__ == "__main__":
+    real_server = RealServer()
+    proxy = Proxy(real_server)
+
+    user_id = "1"
+    proxy.handle(user_id)
