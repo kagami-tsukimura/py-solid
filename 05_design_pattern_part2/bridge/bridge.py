@@ -3,5 +3,5 @@ from abc import ABCMeta, abstractmethod
 
 class MessageApp(metaclass=ABCMeta):
     @abstractmethod
-    def send_message(self, message: str) -> None:
+    def send(self, message: str) -> None:
         pass
