@@ -22,4 +22,4 @@ class Decorator(Component):
 
     @abstractmethod
     def get_log_message(self, msg: str) -> str:
-        return self._component.get_log_message(msg)
+        pass
