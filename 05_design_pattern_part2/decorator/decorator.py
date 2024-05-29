@@ -33,7 +33,7 @@ class TimestampDecorator(Decorator):
     def get_log_message(self, msg: str) -> str:
         now = datetime.datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
-        return self._component.get_log_message(f"[{timestamp}]: {msg}")
+        return self._component.get_log_message(f"{timestamp}: {msg}")
 
 
 class LogLevelDecorator(Decorator):
