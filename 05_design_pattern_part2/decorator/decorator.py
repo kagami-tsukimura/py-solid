@@ -43,5 +43,4 @@ class LogLevelDecorator(Decorator):
         self.__log_level = log_level
 
     def get_log_message(self, msg: str) -> str:
-        level = self.__log_level
-        return self._component.get_log_message(f"[{level}]: {msg}")
+        return self._component.get_log_message(f"[{self.__log_level}]: {msg}")
