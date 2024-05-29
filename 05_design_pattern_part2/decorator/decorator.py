@@ -23,3 +23,9 @@ class Decorator(Component):
     @abstractmethod
     def get_log_message(self, msg: str) -> str:
         pass
+
+
+class TimestampDecorator(Decorator):
+
+    def get_log_message(self, msg: str) -> str:
+        return f"{datetime.datetime.now()}: {msg}"
