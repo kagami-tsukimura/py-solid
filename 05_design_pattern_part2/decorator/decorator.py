@@ -38,9 +38,10 @@ class TimestampDecorator(Decorator):
 
 class LogLevelDecorator(Decorator):
 
-    def __init__(self, component: Component):
+    def __init__(self, component: Component, log_level: str):
         super().__init__(component)
+        self.__log_level = log_level
 
     def get_log_message(self, msg: str) -> str:
-        level = "INFO"
+        level = self.__log_level
         return self._component.get_log_message(f"[{level}]: {msg}")
