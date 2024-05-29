@@ -36,12 +36,18 @@ class OS(metaclass=ABCMeta):
 
 class IOS(OS):
     def send_message(self) -> None:
-        self._app.send("Hello, iOS")
+        if self._app:
+            self._app.send("Hello, iOS")
+        else:
+            raise Exception("App is not set")
 
 
 class Android(OS):
     def send_message(self) -> None:
-        self._app.send("Hello, Android")
+        if self._app:
+            self._app.send("Hello, Android")
+        else:
+            raise Exception("App is not set")
 
 
 if __name__ == "__main__":
