@@ -48,7 +48,7 @@ class LogLevelDecorator(Decorator):
 
 if __name__ == "__main__":
     logger = Logger()
-    decorated_logger = TimestampDecorator(logger)
-    decorated_logger = LogLevelDecorator(decorated_logger, "INFO")
-    print(decorated_logger.get_log_message("Hello"))
-    print(decorated_logger.get_log_message("World"))
+    decorated_logger = LogLevelDecorator(logger, "INFO")
+    timestamp_logger = TimestampDecorator(decorated_logger)
+    print(timestamp_logger.get_log_message("Hello"))
+    print(timestamp_logger.get_log_message("World"))
