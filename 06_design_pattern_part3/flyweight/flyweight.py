@@ -12,3 +12,6 @@ class StampFactory:
 
     def get_stamp(self, char: str) -> Stamp:
         stamp = self.__pool.get(char)
+
+        if stamp:
+            return stamp
