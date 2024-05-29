@@ -19,3 +19,6 @@ class StampFactory:
         new_stamp = Stamp(char)
         self.__pool[char] = new_stamp
         return new_stamp
+
+    def get_pool(self) -> dict[str, Stamp]:
+        return self.__pool
