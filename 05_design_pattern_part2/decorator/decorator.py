@@ -44,3 +44,10 @@ class LogLevelDecorator(Decorator):
 
     def get_log_message(self, msg: str) -> str:
         return self._component.get_log_message(f"[{self.__log_level}]: {msg}")
+
+
+if __name__ == "__main__":
+    logger = Logger()
+    decorated_logger = TimestampDecorator(logger)
+    decorated_logger = LogLevelDecorator(decorated_logger, "INFO")
+    print(decorated_logger.get_log_message("Hello"))
