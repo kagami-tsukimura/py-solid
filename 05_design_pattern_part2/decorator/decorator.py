@@ -52,3 +52,4 @@ if __name__ == "__main__":
     timestamp_logger = TimestampDecorator(decorated_logger)
     print(timestamp_logger.get_log_message("Hello"))
     print(timestamp_logger.get_log_message("World"))
+    print(decorated_logger.get_log_message("World"))
