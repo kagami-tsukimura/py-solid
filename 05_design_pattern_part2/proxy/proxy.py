@@ -2,6 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 
 class Server(metaclass=ABCMeta):
+    @abstractmethod
     def handle(self, user_id: str) -> None:
         pass
 
