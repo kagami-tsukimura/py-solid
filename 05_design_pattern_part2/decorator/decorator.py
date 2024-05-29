@@ -21,4 +21,4 @@ class Decorator(Component):
         self._component = component
 
     def get_log_message(self, msg: str) -> str:
-        return self.component.get_log_message(msg)
+        return self._component.get_log_message(msg)
