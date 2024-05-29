@@ -26,3 +26,10 @@ class StampFactory:
 
 if __name__ == "__main__":
     factory = StampFactory()
+    stamp1 = factory.get_stamp("A")
+    stamp2 = factory.get_stamp("B")
+    stamp3 = factory.get_stamp("C")
+
+    stamp1.print_char()
+    stamp2.print_char()
+    stamp3.print_char()
