@@ -15,3 +15,7 @@ class StampFactory:
 
         if stamp:
             return stamp
+
+        new_stamp = Stamp(char)
+        self.__pool[char] = new_stamp
+        return new_stamp
