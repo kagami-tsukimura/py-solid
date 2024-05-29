@@ -22,3 +22,7 @@ class StampFactory:
 
     def get_pool(self) -> dict[str, Stamp]:
         return self.__pool
+
+
+if __name__ == "__main__":
+    factory = StampFactory()
