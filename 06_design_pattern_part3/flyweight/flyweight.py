@@ -33,3 +33,4 @@ if __name__ == "__main__":
     stamp1.print_char()
     stamp2.print_char()
     stamp3.print_char()
+    print(factory.get_pool())
