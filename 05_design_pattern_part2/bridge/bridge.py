@@ -28,3 +28,7 @@ class OS(metaclass=ABCMeta):
 
     def set_app(self, app: MessageApp) -> None:
         self._app = app
+
+    @abstractmethod
+    def send_message(self) -> None:
+        pass
