@@ -42,3 +42,13 @@ class IOS(OS):
 class Android(OS):
     def send_message(self) -> None:
         self._app.send("Hello, Android")
+
+
+if __name__ == "__main__":
+    ios = IOS()
+    ios.set_app(LINE())
+    ios.send_message()
+
+    android = Android()
+    android.set_app(X())
+    android.send_message()
