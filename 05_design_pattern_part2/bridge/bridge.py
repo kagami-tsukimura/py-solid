@@ -10,3 +10,8 @@ class MessageApp(metaclass=ABCMeta):
 class LINE(MessageApp):
     def send(self, message: str) -> None:
         print(f"[LINE] {message}")
+
+
+class X(MessageApp):
+    def send(self, message: str) -> None:
+        print(f"[X] {message}")
