@@ -104,6 +104,7 @@ if __name__ == "__main__":
     group2.add(Employee("1104", "emp11-4"))
 
     group1.add(group2)
+    root.add(group1)
 
     visitor = ListVisitor()
     group.accept(visitor)
