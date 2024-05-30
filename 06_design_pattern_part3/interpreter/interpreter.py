@@ -38,3 +38,21 @@ class YearExpression(AbstractExpression):
             self.__child.interpret(context)
 
         return context
+
+
+class MonthExpression(AbstractExpression):
+    def __init__(self) -> None:
+        self.__child = None
+
+    def set_child(self, child: AbstractExpression) -> None:
+        self.__child = child
+
+    def interpret(self, context: Context) -> Context:
+        expression = context.expression
+        month = context.date.month
+        context.expression = expression.replace("MM", str(month))
+
+        if self.__child:
+            self.__child.interpret(context)
+
+        return context
