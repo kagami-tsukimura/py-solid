@@ -19,3 +19,11 @@ class Command(metaclass=ABCMeta):
     @abstractmethod
     def execute(self) -> None:
         pass
+
+
+class OpenCommand(Command):
+    def __init__(self, file: File) -> None:
+        self.__file = file
+
+    def execute(self) -> None:
+        self.__file.open()
