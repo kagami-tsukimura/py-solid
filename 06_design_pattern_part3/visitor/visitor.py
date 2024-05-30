@@ -55,3 +55,9 @@ class Visitor(metaclass=ABCMeta):
     @abstractmethod
     def visit(self, entry: Entry) -> None:
         pass
+
+
+class ListVisitor(Visitor):
+    def visit(self, entry: Entry):
+        if type(entry) == Group:
+            print("f{entry.code}: {entry.name}")
