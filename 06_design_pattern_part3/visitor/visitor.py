@@ -71,3 +71,11 @@ class CountVisitor(Visitor):
     def __init__(self) -> None:
         self.__group_count = 0
         self.__employee_count = 0
+
+    @property
+    def group_count(self) -> int:
+        return self.__group_count
+
+    @property
+    def employee_count(self) -> int:
+        return self.__employee_count
