@@ -8,12 +8,14 @@ class File:
     def open(self) -> None:
         print(f"open file: {self.__name}")
 
+    def compress(self) -> None:
+        print(f"compress file: {self.__name}")
+
+    def close(self) -> None:
+        print(f"close file: {self.__name}")
+
 
 class Command(metaclass=ABCMeta):
     @abstractmethod
     def execute(self) -> None:
         pass
-
-
-file = File("test.txt")
-print(File("test.txt").__name)
