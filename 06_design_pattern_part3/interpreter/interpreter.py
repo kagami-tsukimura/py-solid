@@ -32,10 +32,7 @@ class YearExpression(AbstractExpression):
     def interpret(self, context: Context) -> None:
         expression = context.expression
         year = context.date.year
-        if context.expression[0:4] == "YYYY":
-            self.__child = context.expression[4:]
-        else:
-            raise ValueError(f"Invalid expression: {context.expression}")
+        context.expression = expression.replace("YYYY", str(year))
 
     def __str__(self) -> str:
         return f"YearExpression: {self.__child}"
