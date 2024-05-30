@@ -9,7 +9,10 @@ class Memento(metaclass=ABCMeta):
 
 
 class ConcreteMemento(Memento):
-    def __init__(self, memo: str, date: str) -> None:
+    def __init__(
+        self,
+        memo: str,
+    ) -> None:
         self.__memo = memo
         self.__date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
