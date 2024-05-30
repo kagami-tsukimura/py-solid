@@ -50,3 +50,7 @@ class Caretaker:
     def undo(self) -> None:
         if len(self.__mementos) > 0:
             self.__mementos.pop().get_memo()
+
+        else:
+            print("Nothing to snapshot.")
+            return
