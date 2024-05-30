@@ -18,3 +18,11 @@ class ConcreteMemento(Memento):
 
     def __str__(self) -> str:
         return f"{self.__date}: {self.__memo}"
+
+
+class Notepad:
+    def __init__(self, memo: str) -> None:
+        self.__memo = memo
+
+    def get_memo(self) -> str:
+        return self.__memo
