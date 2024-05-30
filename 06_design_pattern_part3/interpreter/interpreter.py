@@ -82,6 +82,7 @@ if __name__ == "__main__":
     now_date = datetime.datetime.now().date()
     expression = "MM/DD/YYYY"
     context = Context(expression, now_date)
+
     year = YearExpression()
     month = MonthExpression()
     day = DayExpression()
