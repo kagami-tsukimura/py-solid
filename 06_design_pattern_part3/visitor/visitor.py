@@ -108,3 +108,6 @@ if __name__ == "__main__":
 
     visitor = ListVisitor()
     count_visitor = CountVisitor()
+
+    root.accept(visitor)
+    root.accept(count_visitor)
