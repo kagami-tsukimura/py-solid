@@ -59,3 +59,5 @@ class Queue:
 
 if __name__ == "__main__":
     file = File("test.txt")
+
+    OpenCommand(file).execute()
