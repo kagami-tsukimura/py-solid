@@ -31,6 +31,5 @@ class Notepad:
         self.__memo = memo
 
     def save(self) -> Memento:
-        return ConcreteMemento(
-            self.__memo, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        )
+        print("Memo saved.")
+        return ConcreteMemento(self.get_memo())
