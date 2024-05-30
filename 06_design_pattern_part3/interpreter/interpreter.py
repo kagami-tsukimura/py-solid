@@ -87,8 +87,8 @@ if __name__ == "__main__":
     month = MonthExpression()
     day = DayExpression()
 
-    year.set_child(month)
     month.set_child(day)
+    year.set_child(month)
 
     year.interpret(context)
     print(context.expression)
