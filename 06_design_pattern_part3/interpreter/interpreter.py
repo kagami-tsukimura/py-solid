@@ -10,7 +10,9 @@ class Context:
         self.__date = date
 
     def validate(self, expression: str) -> None:
-        if not re.match(r"\d{4}-\d{2}-\d{2}", expression):
+        if len(expression) != 10 or not bool(
+            re.match("(?=.*YYYY)(?=.*MM)(?=.*DD)", expression)
+        ):
             raise ValueError(f"Invalid expression: {expression}")
 
 
