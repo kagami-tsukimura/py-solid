@@ -46,6 +46,7 @@ class ChatUser(User):
         super().__init__(mediator, name)
 
     def send(self, msg: str) -> None:
+        print(f"{self._name} -> send message.")
         self._mediator.send_message(msg, self)
 
     def receive(self, msg: str, send_user: User) -> None:
