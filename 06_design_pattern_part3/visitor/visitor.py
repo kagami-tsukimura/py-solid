@@ -11,3 +11,7 @@ class Entry(metaclass=ABCMeta):
     @property
     def code(self) -> str:
         return self.__code
+
+    @property
+    def name(self) -> str:
+        return self.__name
