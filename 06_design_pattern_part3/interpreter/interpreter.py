@@ -34,5 +34,5 @@ class YearExpression(AbstractExpression):
         year = context.date.year
         context.expression = expression.replace("YYYY", str(year))
 
-    def __str__(self) -> str:
-        return f"YearExpression: {self.__child}"
+        if self.__child:
+            self.__child.interpret(context)
