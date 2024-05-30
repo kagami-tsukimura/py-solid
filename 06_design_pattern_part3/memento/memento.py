@@ -29,3 +29,8 @@ class Notepad:
 
     def add_memo(self, memo: str) -> None:
         self.__memo = memo
+
+    def save(self) -> Memento:
+        return ConcreteMemento(
+            self.__memo, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        )
