@@ -49,8 +49,13 @@ class Caretaker:
 
     def undo(self) -> None:
         if len(self.__mementos) > 0:
-            self.__mementos.pop().get_memo()
-
+            memento = self.__mementos.pop()
+            self.__notopad.restore(memento)
         else:
             print("Nothing to snapshot.")
             return
+
+    def show_history(self) -> None:
+        print("History:")
+        for memento in self.__mementos:
+            print(memento)
