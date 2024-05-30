@@ -50,6 +50,7 @@ class MonthExpression(AbstractExpression):
     def interpret(self, context: Context) -> Context:
         expression = context.expression
         month = context.date.month
+        # zfill(2): 1桁の月を2桁に変換
         context.expression = expression.replace("MM", str(month).zfill(2))
 
         if self.__child:
