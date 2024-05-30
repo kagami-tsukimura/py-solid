@@ -29,10 +29,12 @@ class YearExpression(AbstractExpression):
     def set_child(self, child: AbstractExpression) -> None:
         self.__child = child
 
-    def interpret(self, context: Context) -> None:
+    def interpret(self, context: Context) -> Context:
         expression = context.expression
         year = context.date.year
         context.expression = expression.replace("YYYY", str(year))
 
         if self.__child:
             self.__child.interpret(context)
+
+        return context
