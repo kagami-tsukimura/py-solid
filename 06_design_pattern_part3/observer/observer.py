@@ -24,3 +24,6 @@ class ItemSubject(metaclass=ABCMeta):
 
     def attach(self, observer: Observer) -> None:
         self.__observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self.__observers.remove(observer)
