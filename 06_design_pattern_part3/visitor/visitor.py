@@ -17,5 +17,9 @@ class Entry(metaclass=ABCMeta):
         return self.__name
 
     @abstractmethod
+    def get_children(self) -> list[Entry]:
+        pass
+
+    @abstractmethod
     def accept(self, visitor: Visitor) -> None:
         pass
