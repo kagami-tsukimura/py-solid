@@ -27,3 +27,11 @@ class OpenCommand(Command):
 
     def execute(self) -> None:
         self.__file.open()
+
+
+class CloseCommand(Command):
+    def __init__(self, file: File) -> None:
+        self.__file = file
+
+    def execute(self) -> None:
+        self.__file.close()
