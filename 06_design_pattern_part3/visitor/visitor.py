@@ -49,3 +49,9 @@ class Employee(Entry):
 
     def accept(self, visitor: Visitor) -> None:
         visitor.visit(self)
+
+
+class Visitor(metaclass=ABCMeta):
+    @abstractmethod
+    def visit(self, entry: Entry) -> None:
+        pass
