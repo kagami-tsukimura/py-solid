@@ -33,3 +33,7 @@ class Notepad:
     def save(self) -> Memento:
         print("Memo saved.")
         return ConcreteMemento(self.get_memo())
+
+    def restore(self, memento: Memento) -> None:
+        self.add_memo(memento.get_memo())
+        print("Memo restored.")
