@@ -38,3 +38,14 @@ class Group(Entry):
 
     def accept(self, visitor: Visitor) -> None:
         visitor.visit(self)
+
+
+class Employee(Entry):
+    def __init__(self, code: str, name: str) -> None:
+        super().__init__(code, name)
+
+    def get_children(self) -> list[Entry]:
+        return []
+
+    def accept(self, visitor: Visitor) -> None:
+        visitor.visit(self)
