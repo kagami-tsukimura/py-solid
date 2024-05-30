@@ -28,7 +28,7 @@ class ChatRoom(Mediator):
 
 
 class User(metaclass=ABCMeta):
-    def __init__(self, name: str, mediator: Mediator) -> None:
+    def __init__(self, mediator: Mediator, name: str) -> None:
         self.__mediator = mediator
         self.__name = name
 
