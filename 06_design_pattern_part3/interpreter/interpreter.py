@@ -17,5 +17,6 @@ class Context:
 
 
 class AbstractExpression(metaclass=ABCMeta):
+    @abstractmethod
     def interpret(self, context: Context) -> None:
         pass
