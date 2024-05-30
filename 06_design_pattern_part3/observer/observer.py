@@ -35,3 +35,12 @@ class ItemSubject(metaclass=ABCMeta):
     @abstractmethod
     def restock(self) -> None:
         pass
+
+
+class TvGameSubject(ItemSubject):
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
+        self.__in_stock = False
+
+    def restock(self) -> None:
+        print(f"{self.__name} is restocked.")
