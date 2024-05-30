@@ -62,3 +62,4 @@ if __name__ == "__main__":
 
     OpenCommand(file).execute()
     CompressCommand(file).execute()
+    CloseCommand(file).execute()
