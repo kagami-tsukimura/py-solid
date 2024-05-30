@@ -29,6 +29,14 @@ class OpenCommand(Command):
         self.__file.open()
 
 
+class CompressCommand(Command):
+    def __init__(self, file: File) -> None:
+        self.__file = file
+
+    def execute(self) -> None:
+        self.__file.compress()
+
+
 class CloseCommand(Command):
     def __init__(self, file: File) -> None:
         self.__file = file
