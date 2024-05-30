@@ -15,4 +15,7 @@ class Mediator(metaclass=ABCMeta):
 
 class ChatRoom(Mediator):
     def __init__(self) -> None:
-        self.members: list[User] = []
+        self.__members: list[User] = []
+
+    def register_user(self, user: User) -> None:
+        self.__members.append(user)
