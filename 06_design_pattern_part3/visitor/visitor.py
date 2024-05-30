@@ -90,13 +90,28 @@ class CountVisitor(Visitor):
 
 
 if __name__ == "__main__":
-    group = Group("001", "group1")
-    group.add(Group("002", "group2"))
-    group.add(Employee("003", "employee1"))
-    group.add(Employee("004", "employee2"))
+    root = Group("01", "本社")
+    root.add(Employee("0101", "社長"))
+    root.add(Employee("0102", "副社長"))
+
+    group1 = Group("10", "group1")
+    group1.add(Group("1001", "emp10-1"))
+
+    group2 = Group("11", "group2")
+    group2.add(Employee("1101", "emp11-1"))
+    group2.add(Employee("1102", "emp11-2"))
+    group2.add(Employee("1103", "emp11-3"))
+    group2.add(Employee("1104", "emp11-4"))
+
+    group1.add(group2)
+    root.add(group1)
 
     visitor = ListVisitor()
-    group.accept(visitor)
-
     count_visitor = CountVisitor()
-    group.accept(count_visitor)
+
+    root.accept(visitor)
+    root.accept(count_visitor)
+
+    print(
+        f"Group: {count_visitor.group_count}, Employee: {count_visitor.employee_count}"
+    )
