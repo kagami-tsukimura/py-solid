@@ -54,16 +54,21 @@ class ChatUser(User):
 
 
 if __name__ == "__main__":
+    # チャットルーム作成
     mediator = ChatRoom()
 
+    # ユーザー作成
     user1 = ChatUser(mediator, "user1")
     user2 = ChatUser(mediator, "user2")
     user3 = ChatUser(mediator, "user3")
 
+    # ユーザー登録
     mediator.register_user(user1)
     mediator.register_user(user2)
     mediator.register_user(user3)
 
+    # メッセージ送信
+    # Mediator によりメッセージ送信の仲介
     user1.send("hello1")
     user2.send("hello2")
     user3.send("hello3")
