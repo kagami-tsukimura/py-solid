@@ -20,3 +20,8 @@ class AbstractExpression(metaclass=ABCMeta):
     @abstractmethod
     def interpret(self, context: Context) -> None:
         pass
+
+
+class YearExpression(AbstractExpression):
+    def __init__(self) -> None:
+        self.__child = None
