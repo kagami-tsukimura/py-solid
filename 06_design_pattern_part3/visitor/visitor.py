@@ -107,7 +107,4 @@ if __name__ == "__main__":
     root.add(group1)
 
     visitor = ListVisitor()
-    group.accept(visitor)
-
     count_visitor = CountVisitor()
-    group.accept(count_visitor)
