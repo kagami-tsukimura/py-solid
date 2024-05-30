@@ -61,3 +61,5 @@ class ListVisitor(Visitor):
     def visit(self, entry: Entry):
         if isinstance(entry) == Group:
             print("f{entry.code}: {entry.name}")
+        else:
+            print(f"    {entry.code}: {entry.name}")
