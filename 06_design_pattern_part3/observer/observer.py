@@ -31,3 +31,7 @@ class ItemSubject(metaclass=ABCMeta):
     def notify(self) -> None:
         for observer in self.__observers:
             observer.update(self.__name)
+
+    @abstractmethod
+    def restock(self) -> None:
+        pass
