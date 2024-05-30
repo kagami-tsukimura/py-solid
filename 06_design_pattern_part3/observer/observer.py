@@ -43,4 +43,16 @@ class TvGameSubject(ItemSubject):
         self.__in_stock = False
 
     def restock(self) -> None:
-        print(f"{self.__name} is restocked.")
+        print("restocked!")
+        self.__in_stock = True
+        self.notify()
+
+
+if __name__ == "__main__":
+    store = StoreObserver()
+    personal = PersonalObserver()
+    tv_game = TvGameSubject("RPG Game")
+
+    tv_game.attach(store)
+    tv_game.attach(personal)
+    tv_game.restock()
