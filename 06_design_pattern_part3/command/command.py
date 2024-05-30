@@ -62,6 +62,9 @@ if __name__ == "__main__":
     queue = Queue()
 
     queue.add_command(OpenCommand(file))
+    print("------")
+    print("------")
+    print("------")
     queue.execute()
     print("------")
     queue.add_command(CompressCommand(file))
