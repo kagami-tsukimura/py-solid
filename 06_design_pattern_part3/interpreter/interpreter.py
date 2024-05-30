@@ -25,3 +25,12 @@ class AbstractExpression(metaclass=ABCMeta):
 class YearExpression(AbstractExpression):
     def __init__(self) -> None:
         self.__child = None
+
+    def interpret(self, context: Context) -> None:
+        if context.expression[0:4] == "YYYY":
+            self.__child = context.expression[4:]
+        else:
+            raise ValueError(f"Invalid expression: {context.expression}")
+
+    def __str__(self) -> str:
+        return f"YearExpression: {self.__child}"
