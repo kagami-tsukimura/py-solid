@@ -26,6 +26,9 @@ class YearExpression(AbstractExpression):
     def __init__(self) -> None:
         self.__child = None
 
+    def set_child(self, child: AbstractExpression) -> None:
+        self.__child = child
+
     def interpret(self, context: Context) -> None:
         if context.expression[0:4] == "YYYY":
             self.__child = context.expression[4:]
