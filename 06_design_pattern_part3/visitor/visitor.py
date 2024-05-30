@@ -37,4 +37,4 @@ class Group(Entry):
         return self.__entries
 
     def accept(self, visitor: Visitor) -> None:
-        visitor.visit_group(self)
+        visitor.visit(self)
