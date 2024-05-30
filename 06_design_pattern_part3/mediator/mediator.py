@@ -7,3 +7,7 @@ class Mediator(metaclass=ABCMeta):
     @abstractmethod
     def register_user(self, user: User) -> None:
         pass
+
+    @abstractmethod
+    def send_message(self, sendUser: User) -> None:
+        pass
