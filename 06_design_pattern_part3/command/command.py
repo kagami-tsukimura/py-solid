@@ -13,3 +13,7 @@ class Command(metaclass=ABCMeta):
     @abstractmethod
     def execute(self) -> None:
         pass
+
+
+file = File("test.txt")
+print(File("test.txt").__name)
