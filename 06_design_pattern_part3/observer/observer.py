@@ -21,3 +21,6 @@ class ItemSubject(metaclass=ABCMeta):
     def __init__(self, name: str) -> None:
         self.__name = name
         self.__observers: list[Observer] = []
+
+    def attach(self, observer: Observer) -> None:
+        self.__observers.append(observer)
