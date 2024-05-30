@@ -111,3 +111,7 @@ if __name__ == "__main__":
 
     root.accept(visitor)
     root.accept(count_visitor)
+
+    print(
+        f"Group: {count_visitor.group_count}, Employee: {count_visitor.employee_count}"
+    )
