@@ -29,8 +29,8 @@ class ChatRoom(Mediator):
 
 class User(metaclass=ABCMeta):
     def __init__(self, mediator: Mediator, name: str) -> None:
-        self.__mediator = mediator
-        self.__name = name
+        self._mediator = mediator
+        self._name = name
 
     def receive(self, msg: str, send_user: User) -> None:
-        print(f"[{self.__name}]: {msg} from {send_user.__name}")
+        print(f"[{self._name}]: {msg} from {send_user._name}")
