@@ -57,3 +57,22 @@ class MonthExpression(AbstractExpression):
             self.__child.interpret(context)
 
         return context
+
+
+class DayExpression(AbstractExpression):
+    def __init__(self) -> None:
+        self.__child = None
+
+    def set_child(self, child: AbstractExpression) -> None:
+        self.__child = child
+
+    def interpret(self, context: Context) -> Context:
+        expression = context.expression
+        day = context.date.day
+        # zfill(2): 1桁の月を2桁に変換
+        context.expression = expression.replace("DD", str(day).zfill(2))
+
+        if self.__child:
+            self.__child.interpret(context)
+
+        return context
