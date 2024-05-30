@@ -6,8 +6,8 @@ from abc import ABCMeta, abstractmethod
 class Context:
     def __init__(self, expression: str, date: datetime.date):
         self.validate(expression)
-        self.__expression = expression
-        self.__date = date
+        self.expression = expression
+        self.date = date
 
     def validate(self, expression: str) -> None:
         if len(expression) != 10 or not bool(
@@ -30,6 +30,7 @@ class YearExpression(AbstractExpression):
         self.__child = child
 
     def interpret(self, context: Context) -> None:
+        expression = context.expression
         if context.expression[0:4] == "YYYY":
             self.__child = context.expression[4:]
         else:
