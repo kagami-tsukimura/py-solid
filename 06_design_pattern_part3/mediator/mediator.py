@@ -68,6 +68,7 @@ if __name__ == "__main__":
     mediator.register_user(user3)
 
     # メッセージ送信
+    # Mediator によりメッセージ送信の仲介
     user1.send("hello1")
     user2.send("hello2")
     user3.send("hello3")
