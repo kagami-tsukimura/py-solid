@@ -50,7 +50,7 @@ class MonthExpression(AbstractExpression):
     def interpret(self, context: Context) -> Context:
         expression = context.expression
         month = context.date.month
-        context.expression = expression.replace("MM", str(month))
+        context.expression = expression.replace("MM", str(month).zfill(2))
 
         if self.__child:
             self.__child.interpret(context)
