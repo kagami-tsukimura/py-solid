@@ -76,3 +76,18 @@ class DayExpression(AbstractExpression):
             self.__child.interpret(context)
 
         return context
+
+
+if __name__ == "__main__":
+    now_date = datetime.datetime.now().date()
+    expression = "MM/DD/YYYY"
+    context = Context(expression, now_date)
+    year = YearExpression()
+    month = MonthExpression()
+    day = DayExpression()
+
+    year.set_child(month)
+    month.set_child(day)
+
+    year.interpret(context)
+    print(context.expression)
