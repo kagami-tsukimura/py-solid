@@ -59,3 +59,17 @@ class Caretaker:
         print("History:")
         for memento in self.__mementos:
             print(memento)
+
+
+if __name__ == "__main__":
+    notepad = Notepad("Hello, World!")
+    mementos = list()
+    caretaker = Caretaker(notepad, mementos)
+
+    caretaker.backup()
+    notepad.add_memo("First memo")
+
+    caretaker.backup()
+    notepad.add_memo("Second memo")
+
+    caretaker.backup()
