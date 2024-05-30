@@ -49,6 +49,9 @@ class Queue:
     def __init__(self) -> None:
         self.__commands: list[Command] = []
 
+    def add_command(self, command: Command) -> None:
+        self.__commands.append(command)
+
     def execute(self) -> None:
         for command in self.__commands:
             command.execute()
