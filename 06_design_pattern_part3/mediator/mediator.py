@@ -22,5 +22,6 @@ class ChatRoom(Mediator):
 
     def send_message(self, msg: str, send_user: User) -> None:
         for member in self.__members:
+            # 本人以外に送信
             if member != send_user:
                 member.receive(msg, send_user)
