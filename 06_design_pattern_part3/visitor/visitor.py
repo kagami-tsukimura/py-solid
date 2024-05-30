@@ -85,3 +85,5 @@ class CountVisitor(Visitor):
             self.__group_count += 1
         else:
             self.__employee_count += 1
+
+        [child.accept(self) for child in entry.get_children()]
