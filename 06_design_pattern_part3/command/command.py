@@ -59,7 +59,9 @@ class Queue:
 
 if __name__ == "__main__":
     file = File("test.txt")
+    queue = Queue()
 
-    OpenCommand(file).execute()
-    CompressCommand(file).execute()
-    CloseCommand(file).execute()
+    queue.add_command(OpenCommand(file))
+    queue.add_command(CompressCommand(file))
+    queue.add_command(CloseCommand(file))
+    queue.execute()
