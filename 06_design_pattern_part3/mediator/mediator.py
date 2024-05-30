@@ -36,5 +36,6 @@ class User(metaclass=ABCMeta):
     def send(self, msg: str) -> None:
         pass
 
-    def receive(self, msg: str, send_user: User) -> None:
-        print(f"[{self._name}]: {msg} from {send_user._name}")
+    @abstractmethod
+    def receive(self, msg: str) -> None:
+        pass
