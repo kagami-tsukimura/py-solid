@@ -39,3 +39,14 @@ class User(metaclass=ABCMeta):
     @abstractmethod
     def receive(self, msg: str) -> None:
         pass
+
+
+class ChatUser(User):
+    def __init__(self, mediator: Mediator, name: str) -> None:
+        super().__init__(mediator, name)
+
+    def send(self, msg: str) -> None:
+        self._mediator.send_message(msg, self)
+
+    def receive(self, msg: str, send_user: User) -> None:
+        print(f"{self._name} received {msg} from {send_user._name}")
