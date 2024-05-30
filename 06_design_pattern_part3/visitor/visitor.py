@@ -29,3 +29,6 @@ class Group(Entry):
     def __init__(self, code: str, name: str) -> None:
         super().__init__(code, name)
         self.__entries: list[Entry] = []
+
+    def add(self, entry: Entry) -> None:
+        self.__entries.append(entry)
