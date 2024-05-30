@@ -25,3 +25,12 @@ class ChatRoom(Mediator):
             # 本人以外に送信
             if member != send_user:
                 member.receive(msg, send_user)
+
+
+class User(metaclass=ABCMeta):
+    def __init__(self, name: str, mediator: Mediator) -> None:
+        self.__mediator = mediator
+        self.__name = name
+
+    def receive(self, msg: str, send_user: User) -> None:
+        print(f"[{self.__name}]: {msg} from {send_user.__name}")
