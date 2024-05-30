@@ -59,7 +59,7 @@ class Visitor(metaclass=ABCMeta):
 
 class ListVisitor(Visitor):
     def visit(self, entry: Entry):
-        if isinstance(entry) == Group:
+        if isinstance(entry, Group):
             print("f{entry.code}: {entry.name}")
         else:
             print(f"    {entry.code}: {entry.name}")
@@ -81,9 +81,22 @@ class CountVisitor(Visitor):
         return self.__employee_count
 
     def visit(self, entry: Entry):
-        if isinstance(entry) == Group:
+        if isinstance(entry, Group):
             self.__group_count += 1
         else:
             self.__employee_count += 1
 
         [child.accept(self) for child in entry.get_children()]
+
+
+if __name__ == "__main__":
+    group = Group("001", "group1")
+    group.add(Group("002", "group2"))
+    group.add(Employee("003", "employee1"))
+    group.add(Employee("004", "employee2"))
+
+    visitor = ListVisitor()
+    group.accept(visitor)
+
+    count_visitor = CountVisitor()
+    group.accept(count_visitor)
