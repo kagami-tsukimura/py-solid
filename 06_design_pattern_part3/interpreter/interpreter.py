@@ -90,5 +90,5 @@ if __name__ == "__main__":
     month.set_child(day)
     year.set_child(month)
 
-    year.interpret(context)
+    result = year.interpret(context)
     print(context.expression)
