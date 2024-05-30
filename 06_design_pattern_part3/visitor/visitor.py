@@ -15,3 +15,7 @@ class Entry(metaclass=ABCMeta):
     @property
     def name(self) -> str:
         return self.__name
+
+    @abstractmethod
+    def accept(self, visitor: Visitor) -> None:
+        pass
