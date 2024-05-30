@@ -94,3 +94,4 @@ if __name__ == "__main__":
 
     print(now_date.strftime("%m/%d/%Y"))
     print(context.expression)
+    print(now_date.strftime("%Y-%m-%d"))
