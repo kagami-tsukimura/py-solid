@@ -78,3 +78,16 @@ if __name__ == "__main__":
     caretaker.backup()
     print(notepad.get_memo())
     caretaker.show_history()
+
+    print("-----------")
+
+    caretaker.undo()
+    print(notepad.get_memo())
+    caretaker.undo()
+    print(notepad.get_memo())
+    caretaker.undo()
+    print(notepad.get_memo())
+    caretaker.undo()
+    print(notepad.get_memo())
+
+    caretaker.show_history()
