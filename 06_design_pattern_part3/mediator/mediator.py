@@ -50,3 +50,19 @@ class ChatUser(User):
 
     def receive(self, msg: str, send_user: User) -> None:
         print(f"{self._name} received {msg} from {send_user._name}")
+
+
+if __name__ == "__main__":
+    mediator = ChatRoom()
+
+    user1 = ChatUser(mediator, "user1")
+    user2 = ChatUser(mediator, "user2")
+    user3 = ChatUser(mediator, "user3")
+
+    mediator.register_user(user1)
+    mediator.register_user(user2)
+    mediator.register_user(user3)
+
+    user1.send("hello1")
+    user2.send("hello2")
+    user3.send("hello3")
