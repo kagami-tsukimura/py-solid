@@ -23,3 +23,9 @@ class Entry(metaclass=ABCMeta):
     @abstractmethod
     def accept(self, visitor: Visitor) -> None:
         pass
+
+
+class Group(Entry):
+    def __init__(self, code: str, name: str) -> None:
+        super().__init__(code, name)
+        self.__entries: list[Entry] = []
