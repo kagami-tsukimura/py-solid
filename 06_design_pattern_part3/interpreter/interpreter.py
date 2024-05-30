@@ -91,4 +91,5 @@ if __name__ == "__main__":
     year.set_child(month)
 
     result = year.interpret(context)
+    print(now_date.strftime("%m/%d/%Y"))
     print(context.expression)
