@@ -44,6 +44,9 @@ class Caretaker:
         self.__notopad = notepad
         self.__mementos = mementos
 
+    def backup(self) -> Memento:
+        self.__mementos.append(self.__notopad.save())
+
     def add_memento(self, memento: Memento) -> None:
         self.__mementos.append(memento)
 
