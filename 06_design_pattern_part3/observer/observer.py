@@ -27,3 +27,7 @@ class ItemSubject(metaclass=ABCMeta):
 
     def detach(self, observer: Observer) -> None:
         self.__observers.remove(observer)
+
+    def notify(self) -> None:
+        for observer in self.__observers:
+            observer.update(self.__name)
