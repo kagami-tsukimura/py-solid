@@ -52,3 +52,7 @@ class Queue:
     def execute(self) -> None:
         for command in self.__commands:
             command.execute()
+
+
+if __name__ == "__main__":
+    file = File("test.txt")
