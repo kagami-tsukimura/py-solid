@@ -43,3 +43,12 @@ class CloseCommand(Command):
 
     def execute(self) -> None:
         self.__file.close()
+
+
+class Queue:
+    def __init__(self) -> None:
+        self.__commands: list[Command] = []
+
+    def execute(self) -> None:
+        for command in self.__commands:
+            command.execute()
