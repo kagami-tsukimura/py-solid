@@ -37,3 +37,15 @@ class Notepad:
     def restore(self, memento: Memento) -> None:
         self.add_memo(memento.get_memo())
         print("Memo restored.")
+
+
+class Caretaker:
+    def __init__(self, notepad: Notepad, mementos: list[Memento]) -> None:
+        self.__notopad = notepad
+        self.__mementos = mementos
+
+    def add_memento(self, memento: Memento) -> None:
+        self.__mementos.append(memento)
+
+    def get_memento(self, index: int) -> Memento:
+        return self.__mementos[index]
