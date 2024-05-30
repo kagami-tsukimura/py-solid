@@ -31,6 +31,7 @@ class YearExpression(AbstractExpression):
 
     def interpret(self, context: Context) -> None:
         expression = context.expression
+        year = context.date.year
         if context.expression[0:4] == "YYYY":
             self.__child = context.expression[4:]
         else:
