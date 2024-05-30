@@ -11,3 +11,8 @@ class Mediator(metaclass=ABCMeta):
     @abstractmethod
     def send_message(self, sendUser: User) -> None:
         pass
+
+
+class ChatRoom(Mediator):
+    def __init__(self) -> None:
+        self.members: list[User] = []
