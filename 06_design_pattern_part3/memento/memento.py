@@ -47,8 +47,6 @@ class Caretaker:
     def backup(self) -> Memento:
         self.__mementos.append(self.__notopad.save())
 
-    def add_memento(self, memento: Memento) -> None:
-        self.__mementos.append(memento)
-
-    def get_memento(self, index: int) -> Memento:
-        return self.__mementos[index]
+    def undo(self) -> None:
+        if len(self.__mementos) > 0:
+            self.__mementos.pop().get_memo()
