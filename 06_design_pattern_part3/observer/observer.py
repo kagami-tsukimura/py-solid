@@ -9,4 +9,9 @@ class Observer(metaclass=ABCMeta):
 
 class StoreObserver(Observer):
     def update(self, name: str) -> None:
-        print(f"{name} is Arrival. Let's Purchase it!")
+        print(f"{name} is Arrival. Let's purchase it!")
+
+
+class PersonalObserver(Observer):
+    def update(self, name: str) -> None:
+        print(f"{name} is Arrival. Let's buy it!")
