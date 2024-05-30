@@ -79,3 +79,9 @@ class CountVisitor(Visitor):
     @property
     def employee_count(self) -> int:
         return self.__employee_count
+
+    def visit(self, entry: Entry):
+        if isinstance(entry) == Group:
+            self.__group_count += 1
+        else:
+            self.__employee_count += 1
