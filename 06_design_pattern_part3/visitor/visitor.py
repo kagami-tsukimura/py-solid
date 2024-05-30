@@ -65,3 +65,9 @@ class ListVisitor(Visitor):
             print(f"    {entry.code}: {entry.name}")
 
         [child.accept(self) for child in entry.get_children()]
+
+
+class CountVisitor(Visitor):
+    def __init__(self) -> None:
+        self.__group_count = 0
+        self.__employee_count = 0
