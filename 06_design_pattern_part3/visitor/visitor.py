@@ -59,5 +59,5 @@ class Visitor(metaclass=ABCMeta):
 
 class ListVisitor(Visitor):
     def visit(self, entry: Entry):
-        if type(entry) == Group:
+        if isinstance(entry) == Group:
             print("f{entry.code}: {entry.name}")
