@@ -40,7 +40,7 @@ class Notepad:
 
 
 class Caretaker:
-    def __init__(self, notepad: Notepad, mementos: list[Memento]) -> None:
+    def __init__(self, notepad: Notepad, mementos: list[Memento] = []) -> None:
         self.__notopad = notepad
         self.__mementos = mementos
 
@@ -63,13 +63,14 @@ class Caretaker:
 
 if __name__ == "__main__":
     notepad = Notepad("Hello, World!")
-    mementos = list()
-    caretaker = Caretaker(notepad, mementos)
 
+    caretaker = Caretaker(notepad)
     caretaker.backup()
+
     notepad.add_memo("First memo")
 
     caretaker.backup()
     notepad.add_memo("Second memo")
 
     caretaker.backup()
+    print(notepad.get_memo())
