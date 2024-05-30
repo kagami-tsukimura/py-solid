@@ -15,3 +15,6 @@ class ConcreteMemento(Memento):
 
     def get_memo(self) -> str:
         return self.__memo
+
+    def __str__(self) -> str:
+        return f"{self.__date}: {self.__memo}"
