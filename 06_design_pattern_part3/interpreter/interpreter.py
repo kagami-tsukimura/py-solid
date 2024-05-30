@@ -9,6 +9,10 @@ class Context:
         self.__expression = expression
         self.__date = date
 
+    def validate(self, expression: str) -> None:
+        if not re.match(r"\d{4}-\d{2}-\d{2}", expression):
+            raise ValueError(f"Invalid expression: {expression}")
+
 
 class AbstractExpression(metaclass=ABCMeta):
     def interpret(self, context: Context) -> None:
