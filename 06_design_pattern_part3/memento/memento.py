@@ -1,3 +1,4 @@
+import datetime
 from abc import ABCMeta, abstractmethod
 
 
@@ -10,7 +11,7 @@ class Memento(metaclass=ABCMeta):
 class ConcreteMemento(Memento):
     def __init__(self, memo: str, date: str) -> None:
         self.__memo = memo
-        self.__date = date
+        self.__date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def get_memo(self) -> str:
         return self.__memo
