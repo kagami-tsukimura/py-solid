@@ -63,3 +63,6 @@ class ListVisitor(Visitor):
             print("f{entry.code}: {entry.name}")
         else:
             print(f"    {entry.code}: {entry.name}")
+
+        for child in entry.get_children():
+            child.accept(self)
