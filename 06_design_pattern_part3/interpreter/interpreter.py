@@ -5,6 +5,7 @@ from abc import ABCMeta, abstractmethod
 
 class Context:
     def __init__(self, expression: str, date: datetime.date):
+        self.validate(expression)
         self.__expression = expression
         self.__date = date
 
