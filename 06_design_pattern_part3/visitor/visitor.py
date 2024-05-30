@@ -32,3 +32,9 @@ class Group(Entry):
 
     def add(self, entry: Entry) -> None:
         self.__entries.append(entry)
+
+    def get_children(self) -> list[Entry]:
+        return self.__entries
+
+    def accept(self, visitor: Visitor) -> None:
+        visitor.visit_group(self)
